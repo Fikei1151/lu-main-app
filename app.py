@@ -7,7 +7,7 @@ import os
 app = Flask(__name__)
 app.secret_key = 'lumaid_secret_key'  
 
-# SQLite Database Configuration
+
 app.config['SQLALCHEMY_DATABASE_URI'] = 'sqlite:///lumaid.db'
 app.config['SQLALCHEMY_TRACK_MODIFICATIONS'] = False
 db = SQLAlchemy(app)
