@@ -26,7 +26,7 @@ class Contact(db.Model):
         return f'<Contact {self.name}>'
 
 # Telegram Configuration
-TELEGRAM_TOKEN = os.environ.get('TELEGRAM_TOKEN', '')  # Set your Telegram bot token here
+TELEGRAM_TOKEN = os.environ.get('TELEGRAM_TOKEN', '')  
 TELEGRAM_CHAT_ID = os.environ.get('TELEGRAM_CHAT_ID', '')  # Set your chat ID here
 
 def send_telegram_notification(contact):
