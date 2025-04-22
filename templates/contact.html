@@ -1,0 +1,231 @@
+{% extends "layout.html" %}
+
+{% block content %}
+<section class="page-header">
+    <div class="container">
+        {% if lang == 'th' %}
+        <h1>ติดต่อเรา</h1>
+        <p>ติดต่อทีมของเราเพื่อพูดคุยเกี่ยวกับความต้องการด้าน AI ของคุณ</p>
+        {% else %}
+        <h1>Contact Us</h1>
+        <p>Get in touch with our team to discuss your AI needs</p>
+        {% endif %}
+    </div>
+</section>
+
+<section class="contact-section">
+    <div class="container">
+        <div class="contact-grid">
+            <div class="contact-info">
+                {% if lang == 'th' %}
+                <h2>ติดต่อเรา</h2>
+                <p>มีคำถามเกี่ยวกับบริการของเราหรือต้องการพูดคุยเกี่ยวกับวิธีที่ AI สามารถเป็นประโยชน์ต่อธุรกิจของคุณ? ทีมของเราพร้อมช่วยเหลือ</p>
+                
+                <div class="contact-methods">
+                    <div class="contact-method">
+                        <div class="method-icon">📍</div>
+                        <div class="method-details">
+                            <h3>เยี่ยมชมเรา</h3>
+                            <p>123 AI Boulevard<br>Tech District<br>San Francisco, CA 94105</p>
+                        </div>
+                    </div>
+                    
+                    <div class="contact-method">
+                        <div class="method-icon">📞</div>
+                        <div class="method-details">
+                            <h3>โทรหาเรา</h3>
+                            <p>+1 (555) 123-4567</p>
+                        </div>
+                    </div>
+                    
+                    <div class="contact-method">
+                        <div class="method-icon">✉️</div>
+                        <div class="method-details">
+                            <h3>อีเมลถึงเรา</h3>
+                            <p>info@lumaid.ai</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="social-links">
+                    <h3>ติดตามเรา</h3>
+                    <div class="social-icons">
+                        <a href="#" class="social-icon">LinkedIn</a>
+                        <a href="#" class="social-icon">Twitter</a>
+                        <a href="#" class="social-icon">Facebook</a>
+                    </div>
+                </div>
+                {% else %}
+                <h2>Get in Touch</h2>
+                <p>Have questions about our services or want to discuss how AI can benefit your business? Our team is here to help.</p>
+                
+                <div class="contact-methods">
+                    <div class="contact-method">
+                        <div class="method-icon">📍</div>
+                        <div class="method-details">
+                            <h3>Visit Us</h3>
+                            <p>123 AI Boulevard<br>Tech District<br>San Francisco, CA 94105</p>
+                        </div>
+                    </div>
+                    
+                    <div class="contact-method">
+                        <div class="method-icon">📞</div>
+                        <div class="method-details">
+                            <h3>Call Us</h3>
+                            <p>+1 (555) 123-4567</p>
+                        </div>
+                    </div>
+                    
+                    <div class="contact-method">
+                        <div class="method-icon">✉️</div>
+                        <div class="method-details">
+                            <h3>Email Us</h3>
+                            <p>info@lumaid.ai</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="social-links">
+                    <h3>Follow Us</h3>
+                    <div class="social-icons">
+                        <a href="#" class="social-icon">LinkedIn</a>
+                        <a href="#" class="social-icon">Twitter</a>
+                        <a href="#" class="social-icon">Facebook</a>
+                    </div>
+                </div>
+                {% endif %}
+            </div>
+            
+            <div class="contact-form">
+                {% if lang == 'th' %}
+                <h2>ส่งข้อความถึงเรา</h2>
+                <form action="/submit-contact" method="post">
+                    <div class="form-group">
+                        <label for="name">ชื่อ-นามสกุล</label>
+                        <input type="text" id="name" name="name" required>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="email">อีเมล</label>
+                        <input type="email" id="email" name="email" required>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="company">บริษัท</label>
+                        <input type="text" id="company" name="company">
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="subject">หัวข้อ</label>
+                        <input type="text" id="subject" name="subject" required>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="message">ข้อความ</label>
+                        <textarea id="message" name="message" rows="5" required></textarea>
+                    </div>
+                    
+                    <button type="submit" class="btn btn-primary">ส่งข้อความ</button>
+                </form>
+                {% else %}
+                <h2>Send Us a Message</h2>
+                <form action="/submit-contact" method="post">
+                    <div class="form-group">
+                        <label for="name">Full Name</label>
+                        <input type="text" id="name" name="name" required>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="email">Email Address</label>
+                        <input type="email" id="email" name="email" required>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="company">Company</label>
+                        <input type="text" id="company" name="company">
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="subject">Subject</label>
+                        <input type="text" id="subject" name="subject" required>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="message">Message</label>
+                        <textarea id="message" name="message" rows="5" required></textarea>
+                    </div>
+                    
+                    <button type="submit" class="btn btn-primary">Send Message</button>
+                </form>
+                {% endif %}
+            </div>
+        </div>
+    </div>
+</section>
+
+<section class="map-section">
+    <div class="container">
+        {% if lang == 'th' %}
+        <h2 class="section-title">ที่ตั้งของเรา</h2>
+        {% else %}
+        <h2 class="section-title">Our Location</h2>
+        {% endif %}
+        <div class="map-container">
+            <!-- This would be replaced with an actual map integration -->
+            <div class="map-placeholder">
+                {% if lang == 'th' %}
+                <p>แผนที่แบบโต้ตอบจะแสดงที่นี่</p>
+                {% else %}
+                <p>Interactive Map Would Be Displayed Here</p>
+                {% endif %}
+            </div>
+        </div>
+    </div>
+</section>
+
+<section class="faq-section">
+    <div class="container">
+        {% if lang == 'th' %}
+        <h2 class="section-title">คำถามที่พบบ่อย</h2>
+        <div class="faq-grid">
+            <div class="faq-item">
+                <h3>คุณให้บริการในอุตสาหกรรมใดบ้าง?</h3>
+                <p>เราทำงานกับลูกค้าในหลากหลายอุตสาหกรรม รวมถึงการดูแลสุขภาพ การเงิน การค้าปลีก การผลิต และเทคโนโลยี โซลูชัน AI ของเราสามารถปรับให้เข้ากับความต้องการทางธุรกิจที่หลากหลาย</p>
+            </div>
+            <div class="faq-item">
+                <h3>การนำไปใช้โดยทั่วไปใช้เวลานานแค่ไหน?</h3>
+                <p>ระยะเวลาการนำไปใช้แตกต่างกันไปตามความซับซ้อนของโครงการ การผสานรวมอย่างง่ายอาจใช้เวลาเพียงไม่กี่สัปดาห์ ในขณะที่การเปลี่ยนแปลง AI แบบครอบคลุมอาจใช้เวลาหลายเดือน เราให้ระยะเวลาโดยละเอียดในระหว่างการปรึกษาเบื้องต้น</p>
+            </div>
+            <div class="faq-item">
+                <h3>คุณมีการสนับสนุนอย่างต่อเนื่องหรือไม่?</h3>
+                <p>ใช่ เราให้บริการแพ็คเกจสนับสนุนและบำรุงรักษาที่ครอบคลุมสำหรับโซลูชัน AI ทั้งหมดของเรา ทีมของเราทำให้มั่นใจว่าระบบของคุณยังคงได้รับการปรับให้เหมาะสมและทันสมัย</p>
+            </div>
+            <div class="faq-item">
+                <h3>คุณจัดการกับความเป็นส่วนตัวของข้อมูลอย่างไร?</h3>
+                <p>ความเป็นส่วนตัวและความปลอดภัยของข้อมูลเป็นสิ่งสำคัญอันดับแรกของเรา เรายึดมั่นในมาตรฐานและข้อบังคับของอุตสาหกรรม โดยใช้มาตรการรักษาความปลอดภัยที่แข็งแกร่งเพื่อปกป้องข้อมูลที่ละเอียดอ่อนของคุณ</p>
+            </div>
+        </div>
+        {% else %}
+        <h2 class="section-title">Frequently Asked Questions</h2>
+        <div class="faq-grid">
+            <div class="faq-item">
+                <h3>What industries do you serve?</h3>
+                <p>We work with clients across various industries including healthcare, finance, retail, manufacturing, and technology. Our AI solutions are adaptable to diverse business needs.</p>
+            </div>
+            <div class="faq-item">
+                <h3>How long does implementation typically take?</h3>
+                <p>Implementation timelines vary based on project complexity. Simple integrations may take a few weeks, while comprehensive AI transformations can span several months. We provide detailed timelines during our initial consultation.</p>
+            </div>
+            <div class="faq-item">
+                <h3>Do you offer ongoing support?</h3>
+                <p>Yes, we provide comprehensive support and maintenance packages for all our AI solutions. Our team ensures your systems remain optimized and up-to-date.</p>
+            </div>
+            <div class="faq-item">
+                <h3>How do you handle data privacy?</h3>
+                <p>Data privacy and security are our top priorities. We adhere to industry standards and regulations, implementing robust security measures to protect your sensitive information.</p>
+            </div>
+        </div>
+        {% endif %}
+    </div>
+</section>
+{% endblock %}

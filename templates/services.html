@@ -1,0 +1,148 @@
+{% extends "layout.html" %}
+
+{% block content %}
+<section class="page-header">
+    <div class="container">
+        {% if lang == 'th' %}
+        <h1>บริการด้าน AI ของเรา</h1>
+        <p>โซลูชัน AI ครบวงจรที่ปรับให้เหมาะกับความต้องการทางธุรกิจของคุณ</p>
+        {% else %}
+        <h1>Our AI Services</h1>
+        <p>Comprehensive AI solutions tailored to your business needs</p>
+        {% endif %}
+    </div>
+</section>
+
+<section class="services-grid" id="ai-consulting">
+    <div class="container">
+        <div class="service-card">
+            <div class="service-content">
+                {% if lang == 'th' %}
+                <h2>ที่ปรึกษาด้าน AI</h2>
+                <p>ที่ปรึกษาผู้เชี่ยวชาญของเราทำงานร่วมกับคุณเพื่อระบุโอกาสในการนำ AI มาใช้ในธุรกิจของคุณ สร้างแผนกลยุทธ์สำหรับการเปลี่ยนแปลงทางดิจิทัล</p>
+                <ul class="service-features">
+                    <li>การประเมินความพร้อมด้าน AI</li>
+                    <li>การเลือกเทคโนโลยี</li>
+                    <li>การวางแผนการนำไปใช้</li>
+                    <li>การวิเคราะห์ ROI</li>
+                </ul>
+                <a href="/contact" class="btn btn-primary">เริ่มต้นใช้งาน</a>
+                {% else %}
+                <h2>AI Consulting</h2>
+                <p>Our expert consultants work with you to identify opportunities for AI implementation in your business, creating a strategic roadmap for digital transformation.</p>
+                <ul class="service-features">
+                    <li>AI Readiness Assessment</li>
+                    <li>Technology Selection</li>
+                    <li>Implementation Planning</li>
+                    <li>ROI Analysis</li>
+                </ul>
+                <a href="/contact" class="btn btn-primary">Get Started</a>
+                {% endif %}
+            </div>
+            <div class="service-image">
+                <div class="image-placeholder">
+                    {% if lang == 'th' %}
+                    ภาพที่ปรึกษาด้าน AI
+                    {% else %}
+                    AI Consulting Image
+                    {% endif %}
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section class="services-grid" id="custom-solutions">
+    <div class="container">
+        <div class="service-card reverse">
+            <div class="service-content">
+                {% if lang == 'th' %}
+                <h2>โซลูชัน AI เฉพาะทาง</h2>
+                <p>เราพัฒนาโซลูชัน AI เฉพาะทางที่ออกแบบมาโดยเฉพาะสำหรับความท้าทายและวัตถุประสงค์ทางธุรกิจที่ไม่เหมือนใครของคุณ</p>
+                <ul class="service-features">
+                    <li>โมเดลการเรียนรู้ของเครื่องแบบกำหนดเอง</li>
+                    <li>การประมวลผลภาษาธรรมชาติ</li>
+                    <li>ระบบคอมพิวเตอร์วิชั่น</li>
+                    <li>การวิเคราะห์เชิงคาดการณ์</li>
+                </ul>
+                <a href="/contact" class="btn btn-primary">เรียนรู้เพิ่มเติม</a>
+                {% else %}
+                <h2>Custom AI Solutions</h2>
+                <p>We develop bespoke AI solutions designed specifically for your unique business challenges and objectives.</p>
+                <ul class="service-features">
+                    <li>Custom Machine Learning Models</li>
+                    <li>Natural Language Processing</li>
+                    <li>Computer Vision Systems</li>
+                    <li>Predictive Analytics</li>
+                </ul>
+                <a href="/contact" class="btn btn-primary">Learn More</a>
+                {% endif %}
+            </div>
+            <div class="service-image">
+                <div class="image-placeholder">
+                    {% if lang == 'th' %}
+                    ภาพโซลูชันเฉพาะทาง
+                    {% else %}
+                    Custom Solutions Image
+                    {% endif %}
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section class="services-grid" id="integration">
+    <div class="container">
+        <div class="service-card">
+            <div class="service-content">
+                {% if lang == 'th' %}
+                <h2>การผสานรวม AI</h2>
+                <p>ผสานรวมความสามารถของ AI เข้ากับระบบและขั้นตอนการทำงานที่มีอยู่ของคุณอย่างราบรื่นเพื่อเพิ่มประสิทธิภาพและการตัดสินใจ</p>
+                <ul class="service-features">
+                    <li>การผสานรวมกับระบบเดิม</li>
+                    <li>การพัฒนา API</li>
+                    <li>การทำงานอัตโนมัติ</li>
+                    <li>การตั้งค่าไปป์ไลน์ข้อมูล</li>
+                </ul>
+                <a href="/contact" class="btn btn-primary">สำรวจตัวเลือก</a>
+                {% else %}
+                <h2>AI Integration</h2>
+                <p>Seamlessly integrate AI capabilities into your existing systems and workflows to enhance productivity and decision-making.</p>
+                <ul class="service-features">
+                    <li>Legacy System Integration</li>
+                    <li>API Development</li>
+                    <li>Workflow Automation</li>
+                    <li>Data Pipeline Setup</li>
+                </ul>
+                <a href="/contact" class="btn btn-primary">Explore Options</a>
+                {% endif %}
+            </div>
+            <div class="service-image">
+                <div class="image-placeholder">
+                    {% if lang == 'th' %}
+                    ภาพการผสานรวม AI
+                    {% else %}
+                    AI Integration Image
+                    {% endif %}
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section class="cta-section">
+    <div class="container">
+        <div class="cta-content">
+            {% if lang == 'th' %}
+            <h2>พร้อมที่จะใช้พลังของ AI?</h2>
+            <p>ติดต่อทีมของเราวันนี้เพื่อพูดคุยว่าบริการของเราสามารถเป็นประโยชน์ต่อองค์กรของคุณได้อย่างไร</p>
+            <a href="/contact" class="btn btn-primary">ติดต่อเรา</a>
+            {% else %}
+            <h2>Ready to Harness the Power of AI?</h2>
+            <p>Contact our team today to discuss how our services can benefit your organization.</p>
+            <a href="/contact" class="btn btn-primary">Contact Us</a>
+            {% endif %}
+        </div>
+    </div>
+</section>
+{% endblock %}

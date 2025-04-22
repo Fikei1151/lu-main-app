@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="{{ lang }}">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lumaid - {% if lang == 'th' %}โซลูชัน AI ขั้นสูง{% else %}Advanced AI Solutions{% endif %}</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Sarabun:wght@300;400;500;600;700&display=swap">
+    <link rel="icon" href="{{ url_for('static', filename='images/lumaid-i-wnat-logo-ai-brand-minimal-logo-and-h.ico') }}" type="image/x-icon">
+</head>
+<body class="lang-{{ lang }}">
+    <header>
+        <div class="container">
+            <div class="logo">
+                <a href="/">
+                    <img src="{{ url_for('static', filename='images/lumaid---i-wnat-logo-ai-brand--minimal-logo-and-h-Photoroom.png') }}" alt="Lumaid Logo" class="logo-image">
+                </a>
+            </div>
+            <div class="header-right">
+                <nav>
+                    <ul>
+                        {% if lang == 'th' %}
+                        <li><a href="/">หน้าหลัก</a></li>
+                        <li><a href="/services">บริการ</a></li>
+                        <li><a href="/about">เกี่ยวกับเรา</a></li>
+                        <li><a href="/contact">ติดต่อ</a></li>
+                        {% else %}
+                        <li><a href="/">Home</a></li>
+                        <li><a href="/services">Services</a></li>
+                        <li><a href="/about">About</a></li>
+                        <li><a href="/contact">Contact</a></li>
+                        {% endif %}
+                    </ul>
+                </nav>
+                <div class="language-toggle">
+                    {% if lang == 'th' %}
+                    <a href="{{ url_for('switch_language', lang='en') }}" class="lang-btn">EN</a>
+                    {% else %}
+                    <a href="{{ url_for('switch_language', lang='th') }}" class="lang-btn">TH</a>
+                    {% endif %}
+                </div>
+            </div>
+        </div>
+    </header>
+
+    {% with messages = get_flashed_messages(with_categories=true) %}
+        {% if messages %}
+            <div class="flash-messages">
+                {% for category, message in messages %}
+                    <div class="flash-message {{ category }}">
+                        {{ message }}
+                        <button class="close-flash">&times;</button>
+                    </div>
+                {% endfor %}
+            </div>
+        {% endif %}
+    {% endwith %}
+
+    <main>
+        {% block content %}{% endblock %}
+    </main>
+
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-logo">
+                    <img src="{{ url_for('static', filename='images/lumaid---i-wnat-logo-ai-brand--minimal-logo-and-h-Photoroom.png') }}" alt="Lumaid Logo" class="footer-logo-image">
+                    <p>
+                        {% if lang == 'th' %}
+                        โซลูชัน AI ขั้นสูงสำหรับโลกสมัยใหม่
+                        {% else %}
+                        Advanced AI Solutions for the Modern World
+                        {% endif %}
+                    </p>
+                </div>
+                <div class="footer-links">
+                    <div class="footer-column">
+                        <h3>{% if lang == 'th' %}บริษัท{% else %}Company{% endif %}</h3>
+                        <ul>
+                            {% if lang == 'th' %}
+                            <li><a href="/about">เกี่ยวกับเรา</a></li>
+                            <li><a href="/contact">ติดต่อ</a></li>
+                            <li><a href="/careers">ร่วมงานกับเรา</a></li>
+                            {% else %}
+                            <li><a href="/about">About Us</a></li>
+                            <li><a href="/contact">Contact</a></li>
+                            <li><a href="/careers">Careers</a></li>
+                            {% endif %}
+                        </ul>
+                    </div>
+                    <div class="footer-column">
+                        <h3>{% if lang == 'th' %}บริการ{% else %}Services{% endif %}</h3>
+                        <ul>
+                            {% if lang == 'th' %}
+                            <li><a href="/services#ai-consulting">ที่ปรึกษาด้าน AI</a></li>
+                            <li><a href="/services#custom-solutions">โซลูชันเฉพาะทาง</a></li>
+                            <li><a href="/services#integration">การผสานรวม AI</a></li>
+                            {% else %}
+                            <li><a href="/services#ai-consulting">AI Consulting</a></li>
+                            <li><a href="/services#custom-solutions">Custom Solutions</a></li>
+                            <li><a href="/services#integration">AI Integration</a></li>
+                            {% endif %}
+                        </ul>
+                    </div>
+                    <div class="footer-column">
+                        <h3>{% if lang == 'th' %}กฎหมาย{% else %}Legal{% endif %}</h3>
+                        <ul>
+                            {% if lang == 'th' %}
+                            <li><a href="/privacy">นโยบายความเป็นส่วนตัว</a></li>
+                            <li><a href="/terms">เงื่อนไขการใช้บริการ</a></li>
+                            {% else %}
+                            <li><a href="/privacy">Privacy Policy</a></li>
+                            <li><a href="/terms">Terms of Service</a></li>
+                            {% endif %}
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <div class="copyright">
+                <p>&copy; 2025 Lumaid. {% if lang == 'th' %}สงวนลิขสิทธิ์{% else %}All rights reserved{% endif %}.</p>
+            </div>
+        </div>
+    </footer>
+    <script src="{{ url_for('static', filename='js/main.js') }}"></script>
+</body>
+</html>

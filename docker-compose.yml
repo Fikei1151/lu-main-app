@@ -1,0 +1,34 @@
+
+services:
+  web:
+    build: .
+    ports:
+      - "800:800"
+    volumes:
+      - ./:/app
+      - ./instance:/app/instance
+    env_file:
+      - .env
+    restart: always
+    environment:
+      - FLASK_APP=app.py
+      - FLASK_ENV=production
+      - SECRET_KEY=${SECRET_KEY:-lumaid_secret_key}
+      - TELEGRAM_TOKEN=${TELEGRAM_TOKEN:-}
+      - TELEGRAM_CHAT_ID=${TELEGRAM_CHAT_ID:-}
+
+  # Uncomment this section if you want to use a separate database container in the future
+  # db:
+  #   image: postgres:13
+  #   volumes:
+  #     - postgres_data:/var/lib/postgresql/data/
+  #   environment:
+  #     - POSTGRES_USER=lumaid
+  #     - POSTGRES_PASSWORD=lumaid_password
+  #     - POSTGRES_DB=lumaid_db
+  #   ports:
+  #     - "5432:5432"
+
+# volumes:
+#   instance:
+  # postgres_data:  # Uncomment if using PostgreSQL

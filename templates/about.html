@@ -1,0 +1,178 @@
+{% extends "layout.html" %}
+
+{% block content %}
+<section class="page-header">
+    <div class="container">
+        {% if lang == 'th' %}
+        <h1>เกี่ยวกับ Lumaid</h1>
+        <p>นำทางในนวัตกรรมและการนำ AI ไปใช้</p>
+        {% else %}
+        <h1>About Lumaid</h1>
+        <p>Leading the way in AI innovation and implementation</p>
+        {% endif %}
+    </div>
+</section>
+
+<section class="about-intro">
+    <div class="container">
+        <div class="about-grid">
+            <div class="about-content">
+                {% if lang == 'th' %}
+                <h2>พันธกิจของเรา</h2>
+                <p>ที่ Lumaid เรามีพันธกิจในการทำให้ปัญญาประดิษฐ์เป็นประชาธิปไตยและทำให้พลังการเปลี่ยนแปลงของมันเข้าถึงได้สำหรับธุรกิจทุกขนาด เราเชื่อว่า AI ควรเป็นเครื่องมือสำหรับนวัตกรรม ประสิทธิภาพ และการเติบโตที่องค์กรใดๆ สามารถใช้ประโยชน์ได้</p>
+                <p>ก่อตั้งในปี 2018 โดยทีมนักวิจัย AI และนักกลยุทธ์ทางธุรกิจ Lumaid ได้เติบโตเป็นผู้นำระดับโลกในโซลูชัน AI ให้บริการลูกค้าในหลากหลายอุตสาหกรรมและทวีป</p>
+                {% else %}
+                <h2>Our Mission</h2>
+                <p>At Lumaid, we're on a mission to democratize artificial intelligence and make its transformative power accessible to businesses of all sizes. We believe that AI should be a tool for innovation, efficiency, and growth that any organization can leverage.</p>
+                <p>Founded in 2018 by a team of AI researchers and business strategists, Lumaid has grown into a global leader in AI solutions, serving clients across industries and continents.</p>
+                {% endif %}
+            </div>
+            <div class="about-image">
+                <div class="image-placeholder">
+                    {% if lang == 'th' %}
+                    ภาพบริษัท
+                    {% else %}
+                    Company Image
+                    {% endif %}
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section class="values">
+    <div class="container">
+        {% if lang == 'th' %}
+        <h2 class="section-title">ค่านิยมหลักของเรา</h2>
+        {% else %}
+        <h2 class="section-title">Our Core Values</h2>
+        {% endif %}
+        <div class="values-grid">
+            <div class="value-card">
+                <div class="value-icon">🔍</div>
+                {% if lang == 'th' %}
+                <h3>นวัตกรรม</h3>
+                <p>เราผลักดันขอบเขตของสิ่งที่เป็นไปได้กับ AI อย่างต่อเนื่อง ลงทุนในการวิจัยและพัฒนาเพื่อรักษาความล้ำสมัย</p>
+                {% else %}
+                <h3>Innovation</h3>
+                <p>We constantly push the boundaries of what's possible with AI, investing in research and development to stay at the cutting edge.</p>
+                {% endif %}
+            </div>
+            <div class="value-card">
+                <div class="value-icon">🤝</div>
+                {% if lang == 'th' %}
+                <h3>ความเป็นพันธมิตร</h3>
+                <p>เรามองลูกค้าของเราเป็นพันธมิตร ทำงานร่วมกันเพื่อให้มั่นใจว่าโซลูชัน AI สอดคล้องกับเป้าหมายและค่านิยมทางธุรกิจของพวกเขา</p>
+                {% else %}
+                <h3>Partnership</h3>
+                <p>We view our clients as partners, working collaboratively to ensure AI solutions align with their business goals and values.</p>
+                {% endif %}
+            </div>
+            <div class="value-card">
+                <div class="value-icon">🛡️</div>
+                {% if lang == 'th' %}
+                <h3>ความซื่อสัตย์</h3>
+                <p>เรายึดมั่นในมาตรฐานจริยธรรมสูงสุดในการพัฒนาและการนำ AI ไปใช้ โดยให้ความสำคัญกับความโปร่งใสและการใช้งานอย่างรับผิดชอบ</p>
+                {% else %}
+                <h3>Integrity</h3>
+                <p>We uphold the highest ethical standards in AI development and implementation, prioritizing transparency and responsible use.</p>
+                {% endif %}
+            </div>
+            <div class="value-card">
+                <div class="value-icon">📈</div>
+                {% if lang == 'th' %}
+                <h3>ผลกระทบ</h3>
+                <p>เราวัดความสำเร็จของเราจากผลลัพธ์ทางธุรกิจที่จับต้องได้และคุณค่าที่เราสร้างให้กับลูกค้าของเรา</p>
+                {% else %}
+                <h3>Impact</h3>
+                <p>We measure our success by the tangible business outcomes and value we create for our clients.</p>
+                {% endif %}
+            </div>
+        </div>
+    </div>
+</section>
+
+<section class="team">
+    <div class="container">
+        {% if lang == 'th' %}
+        <h2 class="section-title">ทีมผู้นำของเรา</h2>
+        {% else %}
+        <h2 class="section-title">Our Leadership Team</h2>
+        {% endif %}
+        <div class="team-grid">
+            <div class="team-member">
+                <div class="member-image">
+                    <div class="image-circle large"></div>
+                </div>
+                {% if lang == 'th' %}
+                <h3>ดร. ซาร่า เชน</h3>
+                <p class="member-title">CEO และผู้ร่วมก่อตั้ง</p>
+                <p class="member-bio">อดีตนักวิจัย AI ที่ MIT มีประสบการณ์มากกว่า 15 ปีในด้านการเรียนรู้ของเครื่องและกลยุทธ์ทางธุรกิจ</p>
+                {% else %}
+                <h3>Dr. Sarah Chen</h3>
+                <p class="member-title">CEO & Co-Founder</p>
+                <p class="member-bio">Former AI researcher at MIT with over 15 years of experience in machine learning and business strategy.</p>
+                {% endif %}
+            </div>
+            <div class="team-member">
+                <div class="member-image">
+                    <div class="image-circle large"></div>
+                </div>
+                {% if lang == 'th' %}
+                <h3>ไมเคิล โรดริเกซ</h3>
+                <p class="member-title">CTO และผู้ร่วมก่อตั้ง</p>
+                <p class="member-bio">เคยนำการพัฒนา AI ในบริษัทเทคโนโลยี Fortune 500 มีความเชี่ยวชาญในระบบ AI ที่ขยายได้</p>
+                {% else %}
+                <h3>Michael Rodriguez</h3>
+                <p class="member-title">CTO & Co-Founder</p>
+                <p class="member-bio">Previously led AI development at a Fortune 500 tech company, with expertise in scalable AI systems.</p>
+                {% endif %}
+            </div>
+            <div class="team-member">
+                <div class="member-image">
+                    <div class="image-circle large"></div>
+                </div>
+                {% if lang == 'th' %}
+                <h3>เอ็มม่า พาเทล</h3>
+                <p class="member-title">Chief AI Officer</p>
+                <p class="member-bio">ผู้เชี่ยวชาญที่มีชื่อเสียงในการประมวลผลภาษาธรรมชาติ มีสิทธิบัตรและผลงานตีพิมพ์หลายรายการในสาขานี้</p>
+                {% else %}
+                <h3>Emma Patel</h3>
+                <p class="member-title">Chief AI Officer</p>
+                <p class="member-bio">Renowned expert in natural language processing with multiple patents and publications in the field.</p>
+                {% endif %}
+            </div>
+            <div class="team-member">
+                <div class="member-image">
+                    <div class="image-circle large"></div>
+                </div>
+                {% if lang == 'th' %}
+                <h3>เดวิด คิม</h3>
+                <p class="member-title">Chief Business Officer</p>
+                <p class="member-bio">มีประสบการณ์มากกว่า 20 ปีในการให้คำปรึกษาด้านเทคโนโลยีและการพัฒนาธุรกิจในตลาดทั่วโลก</p>
+                {% else %}
+                <h3>David Kim</h3>
+                <p class="member-title">Chief Business Officer</p>
+                <p class="member-bio">20+ years of experience in technology consulting and business development across global markets.</p>
+                {% endif %}
+            </div>
+        </div>
+    </div>
+</section>
+
+<section class="cta-section">
+    <div class="container">
+        <div class="cta-content">
+            {% if lang == 'th' %}
+            <h2>ร่วมงานกับเรา</h2>
+            <p>เรามองหาบุคลากรที่มีความสามารถที่มีความหลงใหลใน AI และนวัตกรรมอยู่เสมอ</p>
+            <a href="/careers" class="btn btn-primary">ดูตำแหน่งงาน</a>
+            {% else %}
+            <h2>Join Our Team</h2>
+            <p>We're always looking for talented individuals passionate about AI and innovation.</p>
+            <a href="/careers" class="btn btn-primary">View Careers</a>
+            {% endif %}
+        </div>
+    </div>
+</section>
+{% endblock %}

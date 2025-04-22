@@ -1,0 +1,170 @@
+{% extends "layout.html" %}
+
+{% block content %}
+<section class="hero">
+    <div class="container">
+        <div class="hero-content">
+            {% if lang == 'th' %}
+            <h1>เปลี่ยนธุรกิจด้วย <span class="highlight">AI อัจฉริยะ</span></h1>
+            <p>Lumaid นำเสนอโซลูชัน AI ล้ำสมัยที่ขับเคลื่อนนวัตกรรมและประสิทธิภาพสำหรับองค์กรทั่วโลก</p>
+            <div class="cta-buttons">
+                <a href="/services" class="btn btn-primary">สำรวจบริการ</a>
+                <a href="/contact" class="btn btn-secondary">ติดต่อเรา</a>
+            </div>
+            {% else %}
+            <h1>Transforming Business Through <span class="highlight">Intelligent AI</span></h1>
+            <p>Lumaid delivers cutting-edge AI solutions that drive innovation and efficiency for enterprises worldwide.</p>
+            <div class="cta-buttons">
+                <a href="/services" class="btn btn-primary">Explore Services</a>
+                <a href="/contact" class="btn btn-secondary">Get in Touch</a>
+            </div>
+            {% endif %}
+        </div>
+        <div class="hero-image">
+            <div class="image-placeholder">
+                <!-- This would be replaced with an actual image -->
+                {% if lang == 'th' %}
+                <div class="placeholder-text">ภาพแสดง AI</div>
+                {% else %}
+                <div class="placeholder-text">AI Visualization</div>
+                {% endif %}
+            </div>
+        </div>
+    </div>
+</section>
+
+<section class="features">
+    <div class="container">
+        {% if lang == 'th' %}
+        <h2 class="section-title">ความสามารถด้าน AI ของเรา</h2>
+        {% else %}
+        <h2 class="section-title">Our AI Capabilities</h2>
+        {% endif %}
+        <div class="feature-grid">
+            <div class="feature-card">
+                <div class="feature-icon">
+                    <div class="icon-placeholder">🤖</div>
+                </div>
+                {% if lang == 'th' %}
+                <h3>การเรียนรู้ของเครื่อง</h3>
+                <p>โมเดลการเรียนรู้ของเครื่องที่ปรับแต่งตามความต้องการและวัตถุประสงค์ทางธุรกิจของคุณ</p>
+                {% else %}
+                <h3>Machine Learning</h3>
+                <p>Custom machine learning models tailored to your specific business needs and objectives.</p>
+                {% endif %}
+            </div>
+            <div class="feature-card">
+                <div class="feature-icon">
+                    <div class="icon-placeholder">💬</div>
+                </div>
+                {% if lang == 'th' %}
+                <h3>การประมวลผลภาษาธรรมชาติ</h3>
+                <p>โซลูชัน NLP ขั้นสูงสำหรับการทำความเข้าใจและสร้างภาษามนุษย์ด้วยความแม่นยำ</p>
+                {% else %}
+                <h3>Natural Language Processing</h3>
+                <p>Advanced NLP solutions for understanding and generating human language with precision.</p>
+                {% endif %}
+            </div>
+            <div class="feature-card">
+                <div class="feature-icon">
+                    <div class="icon-placeholder">👁️</div>
+                </div>
+                {% if lang == 'th' %}
+                <h3>คอมพิวเตอร์วิชั่น</h3>
+                <p>ความสามารถในการวิเคราะห์ภาพและวิดีโอที่ซับซ้อนสำหรับการใช้งานที่หลากหลาย</p>
+                {% else %}
+                <h3>Computer Vision</h3>
+                <p>Sophisticated image and video analysis capabilities for diverse applications.</p>
+                {% endif %}
+            </div>
+            <div class="feature-card">
+                <div class="feature-icon">
+                    <div class="icon-placeholder">📊</div>
+                </div>
+                {% if lang == 'th' %}
+                <h3>การวิเคราะห์เชิงคาดการณ์</h3>
+                <p>การคาดการณ์ที่ขับเคลื่อนด้วยข้อมูลเพื่อช่วยให  %}
+                <h3>การวิเคราะห์เชิงคาดการณ์</h3>
+                <p>การคาดการณ์ที่ขับเคลื่อนด้วยข้อมูลเพื่อช่วยให้คุณตัดสินใจทางธุรกิจอย่างมีข้อมูล</p>
+                {% else %}
+                <h3>Predictive Analytics</h3>
+                <p>Data-driven forecasting to help you make informed business decisions.</p>
+                {% endif %}
+            </div>
+        </div>
+    </div>
+</section>
+
+<section class="clients">
+    <div class="container">
+        {% if lang == 'th' %}
+        <h2 class="section-title">ได้รับความไว้วางใจจากผู้นำในอุตสาหกรรม</h2>
+        {% else %}
+        <h2 class="section-title">Trusted by Industry Leaders</h2>
+        {% endif %}
+        <div class="client-logos">
+            <!-- These would be replaced with actual client logos -->
+            <div class="logo-placeholder">Client 1</div>
+            <div class="logo-placeholder">Client 2</div>
+            <div class="logo-placeholder">Client 3</div>
+            <div class="logo-placeholder">Client 4</div>
+            <div class="logo-placeholder">Client 5</div>
+        </div>
+    </div>
+</section>
+
+<section class="testimonials">
+    <div class="container">
+        {% if lang == 'th' %}
+        <h2 class="section-title">ลูกค้าของเราพูดถึงเราอย่างไร</h2>
+        {% else %}
+        <h2 class="section-title">What Our Clients Say</h2>
+        {% endif %}
+        <div class="testimonial-slider">
+            <div class="testimonial">
+                {% if lang == 'th' %}
+                <p class="quote">"โซลูชัน AI ของ Lumaid ได้เปลี่ยนแปลงการดำเนินธุรกิจของเรา ส่งผลให้ประสิทธิภาพเพิ่มขึ้น 40%"</p>
+                <div class="author">
+                    <div class="author-image">
+                        <!-- This would be an actual image -->
+                        <div class="image-circle"></div>
+                    </div>
+                    <div class="author-info">
+                        <h4>สาราห์ จอห์นสัน</h4>
+                        <p>CTO, Global Innovations</p>
+                    </div>
+                </div>
+                {% else %}
+                <p class="quote">"Lumaid's AI solutions have transformed our business operations, resulting in a 40% increase in efficiency."</p>
+                <div class="author">
+                    <div class="author-image">
+                        <!-- This would be an actual image -->
+                        <div class="image-circle"></div>
+                    </div>
+                    <div class="author-info">
+                        <h4>Sarah Johnson</h4>
+                        <p>CTO, Global Innovations</p>
+                    </div>
+                </div>
+                {% endif %}
+            </div>
+        </div>
+    </div>
+</section>
+
+<section class="cta-section">
+    <div class="container">
+        <div class="cta-content">
+            {% if lang == 'th' %}
+            <h2>พร้อมที่จะเปลี่ยนแปลงธุรกิจของคุณด้วย AI?</h2>
+            <p>นัดหมายปรึกษากับผู้เชี่ยวชาญของเราเพื่อค้นพบว่า Lumaid สามารถช่วยให้คุณบรรลุเป้าหมายได้อย่างไร</p>
+            <a href="/contact" class="btn btn-primary">ติดต่อเราวันนี้</a>
+            {% else %}
+            <h2>Ready to Transform Your Business with AI?</h2>
+            <p>Schedule a consultation with our experts to discover how Lumaid can help you achieve your goals.</p>
+            <a href="/contact" class="btn btn-primary">Contact Us Today</a>
+            {% endif %}
+        </div>
+    </div>
+</section>
+{% endblock %}
