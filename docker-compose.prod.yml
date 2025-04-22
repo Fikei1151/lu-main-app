@@ -1,0 +1,36 @@
+
+services:
+  nginx:
+    image: nginx:latest
+    container_name: nginx
+    ports:
+      - "80:80"
+      - "443:443"
+    volumes:
+      - ./nginx/conf:/etc/nginx/conf.d
+      - ./certbot/www:/var/www/certbot
+      - ./certbot/conf:/etc/letsencrypt
+    depends_on:
+      - web
+
+  web:
+    build: .
+    container_name: lu-main-app
+    expose:
+      - "800"
+    env_file:
+      - .env
+    volumes:
+      - ./:/app
+      - ./instance:/app/instance
+    environment:
+      - FLASK_APP=app.py
+      - FLASK_ENV=production
+      - SECRET_KEY=${SECRET_KEY:-lumaid_secret_key}
+
+  certbot:
+    image: certbot/certbot
+    container_name: certbot
+    volumes:
+      - ./certbot/www:/var/www/certbot
+      - ./certbot/conf:/etc/letsencrypt
