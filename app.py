@@ -7,7 +7,6 @@ import os
 app = Flask(__name__)
 app.secret_key = 'lumaid_secret_key'
 
-# ✅ เปลี่ยนจาก SQLite เป็น PostgreSQL ด้วย DATABASE_URL
 app.config['SQLALCHEMY_DATABASE_URI'] = os.getenv('DATABASE_URL', 'postgresql://lumaid:strongpassword@db:5432/lumaid_db')
 app.config['SQLALCHEMY_TRACK_MODIFICATIONS'] = False
 
