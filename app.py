@@ -7,13 +7,11 @@ import os
 app = Flask(__name__)
 app.secret_key = 'lumaid_secret_key'
 
-app.config['SQLALCHEMY_DATABASE_URI'] = os.getenv('DATABASE_URL', 'postgresql://lumaid:strongpassword@db:5432/lumaid_db')
+# Database configuration
+app.config['SQLALCHEMY_DATABASE_URI'] = os.getenv('DATABASE_URL', 'sqlite:///lumaid.db')
 app.config['SQLALCHEMY_TRACK_MODIFICATIONS'] = False
-
-# ✅ เชื่อมต่อฐานข้อมูล
 db = SQLAlchemy(app)
 
-# ✅ สร้าง model
 class Contact(db.Model):
     id = db.Column(db.Integer, primary_key=True)
     name = db.Column(db.String(100), nullable=False)
@@ -37,7 +35,7 @@ def send_telegram_notification(contact):
 
     message = f"""
 🔔 *New Contact Form Submission*
-    
+
 *Name:* {contact.name}
 *Email:* {contact.email}
 *Company:* {contact.company or 'Not provided'}
@@ -45,24 +43,14 @@ def send_telegram_notification(contact):
 *Message:* {contact.message}
 *Time:* {contact.created_at.strftime('%Y-%m-%d %H:%M:%S')}
 """
-
     try:
         url = f"https://api.telegram.org/bot{TELEGRAM_TOKEN}/sendMessage"
-        data = {
-            "chat_id": TELEGRAM_CHAT_ID,
-            "text": message,
-            "parse_mode": "Markdown"
-        }
+        data = {"chat_id": TELEGRAM_CHAT_ID, "text": message, "parse_mode": "Markdown"}
         response = requests.post(url, data=data)
         return response.status_code == 200
     except Exception as e:
         print(f"Error sending Telegram notification: {e}")
         return False
-
-# ✅ สร้างตารางอัตโนมัติก่อน request แรก
-@app.before_first_request
-def create_tables():
-    db.create_all()
 
 @app.before_request
 def before_request():
@@ -89,23 +77,16 @@ def about():
 @app.route('/contact', methods=['GET', 'POST'])
 def contact():
     if request.method == 'POST':
-        name = request.form.get('name')
-        email = request.form.get('email')
-        company = request.form.get('company')
-        subject = request.form.get('subject')
-        message = request.form.get('message')
-
         new_contact = Contact(
-            name=name,
-            email=email,
-            company=company,
-            subject=subject,
-            message=message
+            name=request.form.get('name'),
+            email=request.form.get('email'),
+            company=request.form.get('company'),
+            subject=request.form.get('subject'),
+            message=request.form.get('message')
         )
 
         db.session.add(new_contact)
         db.session.commit()
-
         send_telegram_notification(new_contact)
 
         if session.get('language') == 'th':
@@ -137,10 +118,9 @@ def telegram_setup():
 
         return redirect(url_for('telegram_setup'))
 
-    return render_template('telegram_setup.html', 
-                          token=TELEGRAM_TOKEN, 
-                          chat_id=TELEGRAM_CHAT_ID,
-                          lang=session.get('language', 'en'))
+    return render_template('telegram_setup.html', token=TELEGRAM_TOKEN, chat_id=TELEGRAM_CHAT_ID, lang=session.get('language', 'en'))
 
 if __name__ == '__main__':
-    app.run(host='0.0.0.0', port=800)
+    with app.app_context():
+        db.create_all()
+    app.run()
