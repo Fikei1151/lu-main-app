@@ -22,4 +22,4 @@ ENV PYTHONUNBUFFERED=1
 EXPOSE 800
 
 # Run the application
-CMD ["gunicorn", "--bind", "0.0.0.0:800", "app:app"]
+CMD ["gunicorn", "-w", "4", "-k", "gevent", "--bind", "0.0.0.0:800", "app:app"]
