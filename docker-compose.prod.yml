@@ -13,8 +13,10 @@ services:
     depends_on:
       - web
     networks:
-      - default
-      - lisa-net
+      default:
+      lisa-net:
+        external: true
+
 
   web:
     build: .
