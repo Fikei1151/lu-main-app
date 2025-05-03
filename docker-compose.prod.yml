@@ -14,7 +14,7 @@ services:
       - web
     networks:
       - default
-      - lisa-net  
+      - lisa-net
 
   web:
     build: .
