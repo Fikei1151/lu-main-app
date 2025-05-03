@@ -12,10 +12,7 @@ services:
       - ./certbot/conf:/etc/letsencrypt
     depends_on:
       - web
-    networks:
-      default:
-      lisa-net:
-        external: true
+
 
 
   web:
