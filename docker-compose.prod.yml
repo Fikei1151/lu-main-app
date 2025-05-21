@@ -12,7 +12,7 @@ services:
       - ./certbot/conf:/etc/letsencrypt  # สำหรับ cert ของ lu-maid.com
       # Path บน Host ที่เก็บ cert ของ nia-stg.lu-maid.com
       # Nginx จะเข้าถึง cert นี้ผ่าน /etc/nginx/ssl/cert.pem และ key.pem ภายใน container
-      - /home/project/nia_sale_back/ssl:/etc/nginx/ssl
+      # - /home/project/nia_sale_back/ssl:/etc/nginx/ssl
     depends_on:
       - web
     networks:
