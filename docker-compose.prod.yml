@@ -37,5 +37,5 @@ services:
       - ./certbot/www:/var/www/certbot
       - ./certbot/conf:/etc/letsencrypt
       - ./nginx/conf:/etc/nginx/conf.d
-       - /home/project/nia_sale_back/ssl:/home/project/nia_sale_back/ssl
+      - /home/project/nia_sale_back/ssl:/home/project/nia_sale_back/ssl
     
