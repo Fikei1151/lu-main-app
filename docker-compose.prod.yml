@@ -9,9 +9,11 @@ services:
       - ./nginx/conf:/etc/nginx/conf.d
       - ./certbot/www:/var/www/certbot
       - ./certbot/conf:/etc/letsencrypt
-      - /home/project/nia_sale_back/ssl:/etc/nginx/ssl  # ✅ เพิ่มบรรทัดนี้
+      - /home/project/nia_sale_back/ssl:/etc/nginx/ssl
     depends_on:
       - web
+    networks:
+      - shared-net
 
   web:
     build: .
@@ -27,6 +29,8 @@ services:
       - FLASK_APP=app.py
       - FLASK_ENV=production
       - SECRET_KEY=${SECRET_KEY:-lumaid_secret_key}
+    networks:
+      - shared-net
 
   certbot:
     image: certbot/certbot
@@ -36,3 +40,9 @@ services:
       - ./certbot/conf:/etc/letsencrypt
       - ./nginx/conf:/etc/nginx/conf.d
       - /home/project/nia_sale_back/ssl:/etc/nginx/ssl
+    networks:
+      - shared-net
+
+networks:
+  shared-net:
+    external: true
