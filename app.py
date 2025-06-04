@@ -120,6 +120,18 @@ def telegram_setup():
 
     return render_template('telegram_setup.html', token=TELEGRAM_TOKEN, chat_id=TELEGRAM_CHAT_ID, lang=session.get('language', 'en'))
 
+@app.route('/privacy')
+def privacy():
+    return render_template('privacy.html', lang=session.get('language', 'en'))
+
+@app.route('/terms')
+def terms():
+    return render_template('terms.html', lang=session.get('language', 'en'))
+
+@app.route('/data-deletion')
+def data_deletion():
+    return render_template('data_deletion.html', lang=session.get('language', 'en'))
+
 if __name__ == '__main__':
     with app.app_context():
         db.create_all()

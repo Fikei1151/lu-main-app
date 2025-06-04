@@ -771,10 +771,188 @@ footer {
 /* For mobile devices */
 @media (max-width: 768px) {
     .logo-image {
-        height: 45px;
+        height: 30px;
     }
     
     .footer-logo-image {
-        height: 40px;
+        height: 25px;
+    }
+}
+
+/* Legal pages styles */
+.privacy-content,
+.terms-content,
+.data-deletion-content {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 2rem;
+    background-color: var(--background-color);
+    box-shadow: var(--shadow);
+    border-radius: 0.5rem;
+    line-height: 1.8;
+}
+
+.privacy-content h2,
+.terms-content h2,
+.data-deletion-content h2 {
+    color: var(--primary-color);
+    margin-top: 2.5rem;
+    margin-bottom: 1rem;
+    padding-bottom: 0.5rem;
+    border-bottom: 2px solid var(--accent-color);
+}
+
+.privacy-content h3,
+.terms-content h3,
+.data-deletion-content h3 {
+    color: var(--secondary-color);
+    margin-top: 1.5rem;
+    margin-bottom: 0.75rem;
+}
+
+.privacy-content ul,
+.terms-content ul,
+.data-deletion-content ul {
+    list-style: disc;
+    padding-left: 2rem;
+    margin-bottom: 1.5rem;
+}
+
+.privacy-content li,
+.terms-content li,
+.data-deletion-content li {
+    margin-bottom: 0.5rem;
+}
+
+.privacy-content p,
+.terms-content p,
+.data-deletion-content p {
+    margin-bottom: 1.5rem;
+    text-align: justify;
+}
+
+.privacy-content strong,
+.terms-content strong,
+.data-deletion-content strong {
+    color: var(--primary-color);
+    font-weight: 600;
+}
+
+/* Timeline styles for data deletion page */
+.timeline {
+    margin: 2rem 0;
+    padding: 1.5rem;
+    background-color: var(--background-alt);
+    border-radius: 0.5rem;
+    border-left: 4px solid var(--primary-color);
+}
+
+.timeline-item {
+    display: flex;
+    align-items: center;
+    margin-bottom: 1.5rem;
+    padding: 1rem;
+    background-color: var(--background-color);
+    border-radius: 0.375rem;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+}
+
+.timeline-item:last-child {
+    margin-bottom: 0;
+}
+
+.timeline-date {
+    flex-shrink: 0;
+    width: 100px;
+    font-weight: 600;
+    color: var(--primary-color);
+    background-color: var(--accent-color);
+    padding: 0.5rem;
+    border-radius: 0.25rem;
+    text-align: center;
+    font-size: 0.875rem;
+}
+
+.timeline-content {
+    margin-left: 1.5rem;
+    color: var(--text-color);
+}
+
+/* Contact info styles */
+.contact-info {
+    background-color: var(--background-alt);
+    padding: 1.5rem;
+    border-radius: 0.5rem;
+    border: 1px solid var(--border-color);
+    margin: 1.5rem 0;
+}
+
+.contact-info p {
+    margin-bottom: 0.5rem;
+}
+
+.contact-info strong {
+    color: var(--primary-color);
+}
+
+/* Content section spacing for legal pages */
+.content-section {
+    padding: 3rem 0;
+    background-color: var(--background-alt);
+}
+
+/* Page header styles for legal pages */
+.page-header {
+    background: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
+    color: white;
+    text-align: center;
+    padding: 4rem 0;
+}
+
+.page-header h1 {
+    margin-bottom: 0.5rem;
+    font-weight: 700;
+}
+
+.page-header p {
+    font-size: 1.125rem;
+    opacity: 0.9;
+    margin-bottom: 0;
+}
+
+/* Mobile responsive for legal pages */
+@media (max-width: 768px) {
+    .privacy-content,
+    .terms-content,
+    .data-deletion-content {
+        padding: 1rem;
+    }
+
+    .page-header {
+        padding: 2.5rem 0;
+    }
+
+    .page-header h1 {
+        font-size: 2rem;
+    }
+
+    .timeline-item {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .timeline-date {
+        width: auto;
+        margin-bottom: 0.75rem;
+    }
+
+    .timeline-content {
+        margin-left: 0;
+    }
+
+    .privacy-content ul,
+    .terms-content ul,
+    .data-deletion-content ul {
+        padding-left: 1.5rem;
     }
 }

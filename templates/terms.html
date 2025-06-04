@@ -1,0 +1,128 @@
+{% extends "layout.html" %}
+
+{% block content %}
+<section class="page-header">
+    <div class="container">
+        <h1>
+            {% if lang == 'th' %}
+            ข้อกำหนดของบริการ
+            {% else %}
+            Terms of Service
+            {% endif %}
+        </h1>
+        <p>
+            {% if lang == 'th' %}
+            วันที่มีผลบังคับใช้: 1 มกราคม 2025
+            {% else %}
+            Effective Date: January 1, 2025
+            {% endif %}
+        </p>
+    </div>
+</section>
+
+<section class="content-section">
+    <div class="container">
+        {% if lang == 'th' %}
+        <div class="terms-content">
+            <h2>1. การยอมรับข้อกำหนด</h2>
+            <p>การเข้าถึงและใช้บริการของ Lumaid หมายความว่าคุณยอมรับและตกลงที่จะปฏิบัติตามข้อกำหนดและเงื่อนไขเหล่านี้ หากคุณไม่เห็นด้วยกับข้อกำหนดใดๆ กรุณาหยุดใช้บริการทันที</p>
+
+            <h2>2. คำจำกัดความ</h2>
+            <ul>
+                <li><strong>"บริการ"</strong> หมายถึงเว็บไซต์ แอปพลิเคชัน และบริการต่างๆ ที่ Lumaid จัดหา</li>
+                <li><strong>"ผู้ใช้"</strong> หมายถึงบุคคลหรือนิติบุคคลที่เข้าถึงหรือใช้บริการของเรา</li>
+                <li><strong>"เนื้อหา"</strong> หมายถึงข้อมูล ข้อความ รูปภาพ หรือสื่ออื่นๆ ที่มีอยู่ในบริการ</li>
+            </ul>
+
+            <h2>3. การใช้บริการ</h2>
+            <p>คุณตกลงที่จะ:</p>
+            <ul>
+                <li>ใช้บริการเพื่อวัตถุประสงค์ที่ถูกกฎหมายเท่านั้น</li>
+                <li>ไม่กระทำการใดๆ ที่อาจเป็นอันตรายต่อบริการหรือผู้ใช้รายอื่น</li>
+                <li>ไม่พยายามเข้าถึงข้อมูลที่ไม่ได้รับอนุญาต</li>
+                <li>ไม่ใช้บริการเพื่อการกระทำที่ผิดกฎหมายหรือฝ่าฝืนสิทธิของผู้อื่น</li>
+            </ul>
+
+            <h2>4. ทรัพย์สินทางปัญญา</h2>
+            <p>เนื้อหาทั้งหมดในบริการ รวมถึงข้อความ รูปภาพ โลโก้ ซอฟต์แวร์ เป็นทรัพย์สินของ Lumaid หรือผู้อนุญาต การใช้งานโดยไม่ได้รับอนุญาตถือเป็นการละเมิดลิขสิทธิ์</p>
+
+            <h2>5. การจำกัดความรับผิดชอบ</h2>
+            <p>Lumaid จะไม่รับผิดชอบต่อ:</p>
+            <ul>
+                <li>ความเสียหายทางตรงหรือทางอ้อมที่เกิดจากการใช้บริการ</li>
+                <li>การหยุดชะงักของบริการหรือข้อผิดพลาดทางเทคนิค</li>
+                <li>การสูญเสียข้อมูลหรือกำไร</li>
+                <li>การกระทำของบุคคลที่สาม</li>
+            </ul>
+
+            <h2>6. การเปลี่ยนแปลงบริการ</h2>
+            <p>เราขอสงวนสิทธิ์ในการแก้ไข อัปเดต หรือยกเลิกบริการทั้งหมดหรือบางส่วนได้ตลอดเวลาโดยไม่ต้องแจ้งให้ทราบล่วงหน้า</p>
+
+            <h2>7. การยกเลิกการใช้บริการ</h2>
+            <p>เราอาจยกเลิกการเข้าถึงบริการของคุณได้ทันทีหากคุณละเมิดข้อกำหนดเหล่านี้ คุณสามารถยกเลิกการใช้บริการได้ตลอดเวลาโดยหยุดใช้บริการ</p>
+
+            <h2>8. กฎหมายที่ใช้บังคับ</h2>
+            <p>ข้อกำหนดนี้จะอยู่ภายใต้และตีความตามกฎหมายของประเทศไทย ข้อพิพาทใดๆ จะอยู่ในเขตอำนาจของศาลไทย</p>
+
+            <h2>9. การติดต่อ</h2>
+            <p>หากคุณมีคำถามเกี่ยวกับข้อกำหนดเหล่านี้ กรุณาติดต่อเราที่:</p>
+            <p>
+                อีเมล: legal@lumaid.com<br>
+                โทรศัพท์: +66 (0) 2-xxx-xxxx<br>
+                ที่อยู่: กรุงเทพฯ ประเทศไทย
+            </p>
+        </div>
+        {% else %}
+        <div class="terms-content">
+            <h2>1. Acceptance of Terms</h2>
+            <p>By accessing and using Lumaid's services, you agree to be bound by these Terms of Service. If you do not agree to any of these terms, please discontinue use of our services immediately.</p>
+
+            <h2>2. Definitions</h2>
+            <ul>
+                <li><strong>"Service"</strong> refers to the website, applications, and various services provided by Lumaid</li>
+                <li><strong>"User"</strong> refers to any individual or entity that accesses or uses our services</li>
+                <li><strong>"Content"</strong> refers to data, text, images, or other media available in the service</li>
+            </ul>
+
+            <h2>3. Use of Service</h2>
+            <p>You agree to:</p>
+            <ul>
+                <li>Use the service for lawful purposes only</li>
+                <li>Not engage in any activity that may harm the service or other users</li>
+                <li>Not attempt to access unauthorized information</li>
+                <li>Not use the service for illegal activities or to violate others' rights</li>
+            </ul>
+
+            <h2>4. Intellectual Property</h2>
+            <p>All content in the service, including text, images, logos, software, is the property of Lumaid or its licensors. Unauthorized use constitutes copyright infringement.</p>
+
+            <h2>5. Limitation of Liability</h2>
+            <p>Lumaid shall not be liable for:</p>
+            <ul>
+                <li>Direct or indirect damages arising from use of the service</li>
+                <li>Service interruptions or technical errors</li>
+                <li>Loss of data or profits</li>
+                <li>Actions of third parties</li>
+            </ul>
+
+            <h2>6. Service Changes</h2>
+            <p>We reserve the right to modify, update, or discontinue all or part of the service at any time without prior notice.</p>
+
+            <h2>7. Termination</h2>
+            <p>We may terminate your access to the service immediately if you violate these terms. You may terminate your use of the service at any time by ceasing to use the service.</p>
+
+            <h2>8. Governing Law</h2>
+            <p>These terms shall be governed by and construed in accordance with the laws of Thailand. Any disputes shall be subject to the jurisdiction of Thai courts.</p>
+
+            <h2>9. Contact</h2>
+            <p>If you have questions about these terms, please contact us at:</p>
+            <p>
+                Email: legal@lumaid.com<br>
+                Phone: +66 (0) 2-xxx-xxxx<br>
+                Address: Bangkok, Thailand
+            </p>
+        </div>
+        {% endif %}
+    </div>
+</section>
+{% endblock %} 

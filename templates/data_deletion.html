@@ -1,0 +1,176 @@
+{% extends "layout.html" %}
+
+{% block content %}
+<section class="page-header">
+    <div class="container">
+        <h1>
+            {% if lang == 'th' %}
+            คำแนะนำการลบข้อมูล
+            {% else %}
+            Data Deletion Instructions
+            {% endif %}
+        </h1>
+        <p>
+            {% if lang == 'th' %}
+            คำแนะนำสำหรับการขอลบข้อมูลส่วนบุคคลของคุณ
+            {% else %}
+            Instructions for requesting deletion of your personal data
+            {% endif %}
+        </p>
+    </div>
+</section>
+
+<section class="content-section">
+    <div class="container">
+        {% if lang == 'th' %}
+        <div class="data-deletion-content">
+            <h2>สิทธิในการลบข้อมูล</h2>
+            <p>ตามกฎหมายคุ้มครองข้อมูลส่วนบุคคล (PDPA) และ GDPR คุณมีสิทธิขอให้ลบข้อมูลส่วนบุคคลของคุณภายใต้เงื่อนไขบางประการ</p>
+
+            <h2>ข้อมูลที่เราเก็บรักษา</h2>
+            <p>เราอาจเก็บรักษาข้อมูลประเภทต่อไปนี้:</p>
+            <ul>
+                <li>ข้อมูลการติดต่อ (ชื่อ, อีเมล, เบอร์โทรศัพท์)</li>
+                <li>ข้อมูลบริษัท (ชื่อบริษัท, ตำแหน่ง)</li>
+                <li>ข้อความและความต้องการของคุณ</li>
+                <li>ข้อมูลการใช้งานเว็บไซต์ (IP address, การเข้าชม)</li>
+                <li>คุกกี้และข้อมูลการติดตาม</li>
+            </ul>
+
+            <h2>วิธีการขอลบข้อมูล</h2>
+            <h3>ขั้นตอนที่ 1: ส่งคำขอ</h3>
+            <p>ส่งอีเมลไปที่ <strong>privacy@lumaid.com</strong> พร้อมข้อมูลต่อไปนี้:</p>
+            <ul>
+                <li>ชื่อเต็มของคุณ</li>
+                <li>ที่อยู่อีเมลที่ใช้ติดต่อเรา</li>
+                <li>หัวข้อ: "คำขอลบข้อมูลส่วนบุคคล"</li>
+                <li>เหตุผลในการขอลบข้อมูล (ไม่บังคับ)</li>
+                <li>หลักฐานยืนยันตัวตน (สำเนาบัตรประชาชนหรือพาสปอร์ต)</li>
+            </ul>
+
+            <h3>ขั้นตอนที่ 2: การยืนยันตัวตน</h3>
+            <p>เราจะยืนยันตัวตนของคุณเพื่อความปลอดภัย ซึ่งอาจใช้เวลา 1-2 วันทำการ</p>
+
+            <h3>ขั้นตอนที่ 3: การดำเนินการลบข้อมูล</h3>
+            <p>หลังจากยืนยันตัวตนแล้ว เราจะดำเนินการลบข้อมูลภายใน 30 วัน</p>
+
+            <h2>ข้อมูลที่ไม่สามารถลบได้</h2>
+            <p>เราอาจไม่สามารถลบข้อมูลในกรณีต่อไปนี้:</p>
+            <ul>
+                <li>ข้อมูลที่จำเป็นต้องเก็บไว้ตามกฎหมาย</li>
+                <li>ข้อมูลที่จำเป็นสำหรับการป้องกันการฉ้อโกง</li>
+                <li>ข้อมูลที่อยู่ในระหว่างการดำเนินคดี</li>
+                <li>ข้อมูลที่จำเป็นสำหรับการรักษาความปลอดภัย</li>
+            </ul>
+
+            <h2>ระยะเวลาการดำเนินการ</h2>
+            <div class="timeline">
+                <div class="timeline-item">
+                    <div class="timeline-date">ทันที</div>
+                    <div class="timeline-content">รับคำขอและส่งอีเมลยืนยันการรับ</div>
+                </div>
+                <div class="timeline-item">
+                    <div class="timeline-date">1-2 วัน</div>
+                    <div class="timeline-content">ยืนยันตัวตนและตรวจสอบคำขอ</div>
+                </div>
+                <div class="timeline-item">
+                    <div class="timeline-date">7-30 วัน</div>
+                    <div class="timeline-content">ดำเนินการลบข้อมูลและส่งอีเมลยืนยัน</div>
+                </div>
+            </div>
+
+            <h2>การติดต่อและการสอบถาม</h2>
+            <p>หากคุณมีคำถามเกี่ยวกับกระบวนการลบข้อมูล กรุณาติดต่อ:</p>
+            <div class="contact-info">
+                <p><strong>อีเมล:</strong> privacy@lumaid.com</p>
+                <p><strong>โทรศัพท์:</strong> +66 (0) 2-xxx-xxxx</p>
+                <p><strong>เวลาทำการ:</strong> จันทร์-ศุกร์ 9:00-18:00 น.</p>
+            </div>
+
+            <h2>ทางเลือกอื่น</h2>
+            <p>นอกจากการลบข้อมูลแล้ว คุณยังสามารถ:</p>
+            <ul>
+                <li>ขอให้แก้ไขข้อมูลที่ไม่ถูกต้อง</li>
+                <li>ขอให้จำกัดการประมวลผลข้อมูล</li>
+                <li>คัดค้านการประมวลผลข้อมูล</li>
+                <li>ขอให้โอนย้ายข้อมูล</li>
+            </ul>
+        </div>
+        {% else %}
+        <div class="data-deletion-content">
+            <h2>Right to Data Deletion</h2>
+            <p>Under personal data protection laws (PDPA) and GDPR, you have the right to request deletion of your personal data under certain conditions.</p>
+
+            <h2>Data We Collect</h2>
+            <p>We may collect and store the following types of data:</p>
+            <ul>
+                <li>Contact information (name, email, phone number)</li>
+                <li>Company information (company name, position)</li>
+                <li>Your messages and requirements</li>
+                <li>Website usage data (IP address, visits)</li>
+                <li>Cookies and tracking data</li>
+            </ul>
+
+            <h2>How to Request Data Deletion</h2>
+            <h3>Step 1: Submit Request</h3>
+            <p>Send an email to <strong>privacy@lumaid.com</strong> with the following information:</p>
+            <ul>
+                <li>Your full name</li>
+                <li>Email address used to contact us</li>
+                <li>Subject: "Personal Data Deletion Request"</li>
+                <li>Reason for deletion request (optional)</li>
+                <li>Identity verification (copy of ID card or passport)</li>
+            </ul>
+
+            <h3>Step 2: Identity Verification</h3>
+            <p>We will verify your identity for security purposes, which may take 1-2 business days.</p>
+
+            <h3>Step 3: Data Deletion Process</h3>
+            <p>After identity verification, we will proceed with data deletion within 30 days.</p>
+
+            <h2>Data That Cannot Be Deleted</h2>
+            <p>We may not be able to delete data in the following cases:</p>
+            <ul>
+                <li>Data required to be retained by law</li>
+                <li>Data necessary for fraud prevention</li>
+                <li>Data involved in ongoing legal proceedings</li>
+                <li>Data necessary for security purposes</li>
+            </ul>
+
+            <h2>Processing Timeline</h2>
+            <div class="timeline">
+                <div class="timeline-item">
+                    <div class="timeline-date">Immediate</div>
+                    <div class="timeline-content">Receive request and send confirmation email</div>
+                </div>
+                <div class="timeline-item">
+                    <div class="timeline-date">1-2 days</div>
+                    <div class="timeline-content">Verify identity and review request</div>
+                </div>
+                <div class="timeline-item">
+                    <div class="timeline-date">7-30 days</div>
+                    <div class="timeline-content">Process data deletion and send confirmation</div>
+                </div>
+            </div>
+
+            <h2>Contact and Inquiries</h2>
+            <p>If you have questions about the data deletion process, please contact:</p>
+            <div class="contact-info">
+                <p><strong>Email:</strong> privacy@lumaid.com</p>
+                <p><strong>Phone:</strong> +66 (0) 2-xxx-xxxx</p>
+                <p><strong>Business Hours:</strong> Monday-Friday 9:00 AM - 6:00 PM</p>
+            </div>
+
+            <h2>Other Options</h2>
+            <p>Besides data deletion, you can also:</p>
+            <ul>
+                <li>Request correction of inaccurate data</li>
+                <li>Request restriction of data processing</li>
+                <li>Object to data processing</li>
+                <li>Request data portability</li>
+            </ul>
+        </div>
+        {% endif %}
+    </div>
+</section>
+{% endblock %} 
