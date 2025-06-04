@@ -1,224 +1,417 @@
 {% extends "layout.html" %}
 
 {% block content %}
-<section class="page-header">
-    <div class="container">
-        {% if lang == 'th' %}
-        <h1>เกี่ยวกับ Lumaid</h1>
-        <p>นำทางในนวัตกรรมและการนำ AI ไปใช้</p>
-        {% else %}
-        <h1>About Lumaid</h1>
-        <p>Leading the way in AI innovation and implementation</p>
-        {% endif %}
-    </div>
-</section>
-
-<section class="about-intro">
-    <div class="container">
-        <div class="about-grid">
-            <div class="about-content">
-                {% if lang == 'th' %}
-                <h2>พันธกิจของเรา</h2>
-
-<p>
-    ที่ <strong>Lumaid</strong> เรามีพันธกิจในการทำให้ AI เป็นของทุกคน ไม่ว่าจะเป็นธุรกิจขนาดเล็กหรือองค์กรขนาดใหญ่
-</p>
-
-<p>
-    เราเชื่อว่า AI ไม่ควรเป็นเครื่องมือที่อยู่แค่ในมือของไม่กี่คน  
-    แต่ควรเป็นพลังที่ทุกธุรกิจสามารถเข้าถึง นำไปใช้ และเติบโตไปกับมันได้อย่างแท้จริง
-</p>
-
-<p>
-    เราพัฒนา AI ที่เข้าใจมนุษย์ ใช้ง่าย และปรับใช้ได้จริงในชีวิตการทำงาน  
-    ไม่ว่าจะเพื่อสร้างสรรค์สิ่งใหม่ เพิ่มประสิทธิภาพ หรือตอบโจทย์เฉพาะของแต่ละอุตสาหกรรม
-</p>
-
-<p>
-    <strong>Lumaid</strong> ก่อตั้งขึ้นในปี <strong>2025</strong> โดยทีมที่เชื่อในเทคโนโลยีที่ไม่ทิ้งใครไว้ข้างหลัง  
-    เราคือกลุ่มนักพัฒนา AI นักวางกลยุทธ์ และผู้ประกอบการ  
-    ที่ร่วมกันสร้างระบบอัจฉริยะที่เข้าใจ “คน” และ “ความเป็นไปได้”
-</p>
-
-<p>
-    วันนี้เราพร้อมร่วมทางกับองค์กรทุกขนาด…  
-    เพื่อเปลี่ยนความซับซ้อนให้กลายเป็นโอกาสที่จับต้องได้
-</p>
-    
-                {% else %}
-                <h2>Our Mission</h2>
-                <p>
-                    At <strong>Lumaid</strong>, our mission is to make AI truly accessible — for businesses of all sizes, not just the privileged few.
-                    We believe that artificial intelligence shouldn't be a tool reserved for the elite, but a transformative force that empowers anyone to innovate, grow, and thrive.
-                </p>
-                <p>
-                    That's why we build AI that understands humans — not just data.
-                    Our solutions are simple to use, powerful in impact, and adaptable across industries.
-                </p>
-                <p>
-                    Founded in <strong>2025</strong> by a team of AI developers, business strategists, and human-centered thinkers,
-                    Lumaid was born from the belief that technology should never leave people behind.
-                </p>
-                <p>
-                    Today, we help organizations turn complexity into clarity — and possibility into progress.
-                </p>
-                {% endif %}
-            </div>
-            <div class="about-image">
-                <div class="image-placeholder">
-                    {% if lang == 'th' %}
-                    ภาพบริษัท
-                    {% else %}
-                    Company Image
-                    {% endif %}
-                </div>
-            </div>
-        </div>
-    </div>
-</section>
-
-<section class="values">
-    <div class="container">
-        {% if lang == 'th' %}
-        <h2 class="section-title">ค่านิยมหลักของเรา</h2>
-        {% else %}
-        <h2 class="section-title">Our Core Values</h2>
-        {% endif %}
-        <div class="values-grid">
-            <div class="value-card">
-                <div class="value-icon">🔍</div>
-                {% if lang == 'th' %}
-                <h3>นวัตกรรม</h3>
-                <p>เราผลักดันขอบเขตของสิ่งที่เป็นไปได้กับ AI อย่างต่อเนื่อง ลงทุนในการวิจัยและพัฒนาเพื่อรักษาความล้ำสมัย</p>
-                {% else %}
-                <h3>Innovation</h3>
-                <p>We constantly push the boundaries of what's possible with AI, investing in research and development to stay at the cutting edge.</p>
-                {% endif %}
-            </div>
-            <div class="value-card">
-                <div class="value-icon">🤝</div>
-                {% if lang == 'th' %}
-                <h3>ความเป็นพันธมิตร</h3>
-                <p>เรามองลูกค้าของเราเป็นพันธมิตร ทำงานร่วมกันเพื่อให้มั่นใจว่าโซลูชัน AI สอดคล้องกับเป้าหมายและค่านิยมทางธุรกิจของพวกเขา</p>
-                {% else %}
-                <h3>Partnership</h3>
-                <p>We view our clients as partners, working collaboratively to ensure AI solutions align with their business goals and values.</p>
-                {% endif %}
-            </div>
-            <div class="value-card">
-                <div class="value-icon">🛡️</div>
-                {% if lang == 'th' %}
-                <h3>ความซื่อสัตย์</h3>
-                <p>เรายึดมั่นในมาตรฐานจริยธรรมสูงสุดในการพัฒนาและการนำ AI ไปใช้ โดยให้ความสำคัญกับความโปร่งใสและการใช้งานอย่างรับผิดชอบ</p>
-                {% else %}
-                <h3>Integrity</h3>
-                <p>We uphold the highest ethical standards in AI development and implementation, prioritizing transparency and responsible use.</p>
-                {% endif %}
-            </div>
-            <div class="value-card">
-                <div class="value-icon">📈</div>
-                {% if lang == 'th' %}
-                <h3>ผลกระทบ</h3>
-                <p>เราวัดความสำเร็จของเราจากผลลัพธ์ทางธุรกิจที่จับต้องได้และคุณค่าที่เราสร้างให้กับลูกค้าของเรา</p>
-                {% else %}
-                <h3>Impact</h3>
-                <p>We measure our success by the tangible business outcomes and value we create for our clients.</p>
-                {% endif %}
-            </div>
-        </div>
-    </div>
-</section>
-
-<!-- <section class="team">
-    <div class="container">
-        {% if lang == 'th' %}
-        <h2 class="section-title">ทีมผู้นำของเรา</h2>
-        {% else %}
-        <h2 class="section-title">Our Leadership Team</h2>
-        {% endif %}
-        <div class="team-grid">
-            <div class="team-member">
-                <div class="member-image">
-                    <div class="image-circle large"></div>
-                </div>
-                {% if lang == 'th' %}
-                <h3>ฟิกรี หะยียูโซ๊ะ</h3>
-                <p class="member-title">CEO และผู้ก่อตั้ง</p>
-                <p class="member-bio">
-                    วิศวกรด้านปัญญาประดิษฐ์ที่มีประสบการณ์ในบทบาท AI Specialist และ Data Scientist  
-                    เชี่ยวชาญการพัฒนาโซลูชันที่ผสานเทคโนโลยีขั้นสูงเข้ากับเป้าหมายเชิงธุรกิจ  
-                    มุ่งเน้นการสร้างระบบ AI ที่ใช้งานได้จริง มีประสิทธิภาพ และช่วยผลักดันการเติบโตขององค์กรอย่างยั่งยืน
-                </p>
-                {% else %}
-                <h3>Fikree Hajiysuof</h3>
-                <p class="member-title">CEO & Co-Founder</p>
-                <p class="member-bio">
-                    An AI engineer with experience as an AI Specialist and Data Scientist,  
-                    specializing in integrating deep-tech innovation with strategic business goals.  
-                    Passionate about developing practical, high-impact AI solutions that drive sustainable organizational growth.
-                </p>
-                {% endif %}
-                
-            </div>
-            <div class="team-member">
-                <div class="member-image">
-                    <div class="image-circle large"></div>
-                </div>
-                {% if lang == 'th' %}
-                <h3>ไมเคิล โรดริเกซ</h3>
-                <p class="member-title">CTO และผู้ร่วมก่อตั้ง</p>
-                <p class="member-bio">เคยนำการพัฒนา AI ในบริษัทเทคโนโลยี Fortune 500 มีความเชี่ยวชาญในระบบ AI ที่ขยายได้</p>
-                {% else %}
-                <h3>Michael Rodriguez</h3>
-                <p class="member-title">CTO & Co-Founder</p>
-                <p class="member-bio">Previously led AI development at a Fortune 500 tech company, with expertise in scalable AI systems.</p>
-                {% endif %}
-            </div>
-            <div class="team-member">
-                <div class="member-image">
-                    <div class="image-circle large"></div>
-                </div>
-                {% if lang == 'th' %}
-                <h3>เอ็มม่า พาเทล</h3>
-                <p class="member-title">Chief AI Officer</p>
-                <p class="member-bio">ผู้เชี่ยวชาญที่มีชื่อเสียงในการประมวลผลภาษาธรรมชาติ มีสิทธิบัตรและผลงานตีพิมพ์หลายรายการในสาขานี้</p>
-                {% else %}
-                <h3>Emma Patel</h3>
-                <p class="member-title">Chief AI Officer</p>
-                <p class="member-bio">Renowned expert in natural language processing with multiple patents and publications in the field.</p>
-                {% endif %}
-            </div>
-            <div class="team-member">
-                <div class="member-image">
-                    <div class="image-circle large"></div>
-                </div>
-                {% if lang == 'th' %}
-                <h3>เดวิด คิม</h3>
-                <p class="member-title">Chief Business Officer</p>
-                <p class="member-bio">มีประสบการณ์มากกว่า 20 ปีในการให้คำปรึกษาด้านเทคโนโลยีและการพัฒนาธุรกิจในตลาดทั่วโลก</p>
-                {% else %}
-                <h3>David Kim</h3>
-                <p class="member-title">Chief Business Officer</p>
-                <p class="member-bio">20+ years of experience in technology consulting and business development across global markets.</p>
-                {% endif %}
-            </div>
-        </div>
-    </div>
-</section> -->
-
-<section class="cta-section">
-    <div class="container">
-        <div class="cta-content">
+<main>
+    <!-- About Hero Section -->
+    <section class="page-header">
+        <div class="container">
             {% if lang == 'th' %}
-            <h2>ร่วมงานกับเรา</h2>
-            <p>เรามองหาบุคลากรที่มีความสามารถที่มีความหลงใหลใน AI และนวัตกรรมอยู่เสมอ</p>
-            <a href="/careers" class="btn btn-primary">ดูตำแหน่งงาน</a>
+            <h1>เกี่ยวกับ Lumaid AI Solutions</h1>
+            <p>ทีมผู้เชี่ยวชาญด้าน AI และการพัฒนาซอฟต์แวร์ที่มุ่งมั่นสร้างโซลูชันที่ตอบโจทย์ธุรกิจสมัยใหม่</p>
             {% else %}
-            <h2>Join Our Team</h2>
-            <p>We're always looking for talented individuals passionate about AI and innovation.</p>
-            <a href="/careers" class="btn btn-primary">View Careers</a>
+            <h1>About Lumaid AI Solutions</h1>
+            <p>Expert team in AI and software development committed to creating solutions for modern business needs</p>
             {% endif %}
         </div>
-    </div>
-</section>
+    </section>
+
+    <!-- Company Overview -->
+    <section class="about-intro py-5">
+        <div class="container">
+            <div class="row align-items-center">
+                <div class="col-lg-6">
+                    {% if lang == 'th' %}
+                    <h2>พันธกิจของเรา</h2>
+                    <p class="lead">
+                        Lumaid AI Solutions เป็นบริษัทผู้เชี่ยวชาญด้านการพัฒนาซอฟต์แวร์ AI, ระบบแชทบอท, 
+                        การสร้างเว็บไซต์ และการประสาน AI เข้ากับระบบองค์กร
+                    </p>
+                    <p>
+                        เราเชื่อว่าเทคโนโลยี AI สามารถเปลี่ยนแปลงวิธีการทำงานขององค์กรให้มีประสิทธิภาพมากขึ้น 
+                        ด้วยทีมงานมากประสบการณ์และความเข้าใจในเทคโนโลยีล้ำสมัย เราพร้อมที่จะเป็นพันธมิตรในการพัฒนาธุรกิจของคุณ
+                    </p>
+                    <div class="company-stats mt-4">
+                        <div class="row">
+                            <div class="col-4 text-center">
+                                <h3 class="text-primary">50+</h3>
+                                <p>โปรเจคสำเร็จ</p>
+                            </div>
+                            <div class="col-4 text-center">
+                                <h3 class="text-primary">5+</h3>
+                                <p>ปีประสบการณ์</p>
+                            </div>
+                            <div class="col-4 text-center">
+                                <h3 class="text-primary">98%</h3>
+                                <p>ความพึงพอใจ</p>
+                            </div>
+                        </div>
+                    </div>
+                    {% else %}
+                    <h2>Our Mission</h2>
+                    <p class="lead">
+                        Lumaid AI Solutions is a specialized company in AI software development, chatbot systems, 
+                        website creation, and AI integration with organizational systems.
+                    </p>
+                    <p>
+                        We believe that AI technology can transform how organizations work to be more efficient. 
+                        With our experienced team and understanding of cutting-edge technology, we're ready to be your partner in business development.
+                    </p>
+                    <div class="company-stats mt-4">
+                        <div class="row">
+                            <div class="col-4 text-center">
+                                <h3 class="text-primary">50+</h3>
+                                <p>Successful Projects</p>
+                            </div>
+                            <div class="col-4 text-center">
+                                <h3 class="text-primary">5+</h3>
+                                <p>Years Experience</p>
+                            </div>
+                            <div class="col-4 text-center">
+                                <h3 class="text-primary">98%</h3>
+                                <p>Client Satisfaction</p>
+                            </div>
+                        </div>
+                    </div>
+                    {% endif %}
+                </div>
+                <div class="col-lg-6">
+                    <img src="https://images.unsplash.com/photo-1552664730-d307ca884978?w=600&h=400&fit=crop&crop=center&auto=format" 
+                         alt="{% if lang == 'th' %}ทีมงาน Lumaid AI Solutions{% else %}Lumaid AI Solutions Team{% endif %}" 
+                         class="img-fluid rounded shadow">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Expertise Areas -->
+    <section class="expertise py-5 bg-light">
+        <div class="container">
+            {% if lang == 'th' %}
+            <h2 class="section-title text-center mb-5">ความเชี่ยวชาญของเรา</h2>
+            {% else %}
+            <h2 class="section-title text-center mb-5">Our Expertise</h2>
+            {% endif %}
+            
+            <div class="row g-4">
+                <div class="col-lg-6 col-md-6">
+                    <div class="expertise-card">
+                        <div class="expertise-icon">
+                            <i class="fas fa-brain"></i>
+                        </div>
+                        {% if lang == 'th' %}
+                        <h3>AI & Machine Learning</h3>
+                        <p>ความเชี่ยวชาญในการพัฒนาโมเดล AI, Machine Learning, Deep Learning และ Neural Networks สำหรับงานเฉพาะทาง</p>
+                        <ul class="expertise-list">
+                            <li><i class="fas fa-check text-success"></i> TensorFlow & PyTorch</li>
+                            <li><i class="fas fa-check text-success"></i> Computer Vision</li>
+                            <li><i class="fas fa-check text-success"></i> Natural Language Processing</li>
+                            <li><i class="fas fa-check text-success"></i> Predictive Analytics</li>
+                        </ul>
+                        {% else %}
+                        <h3>AI & Machine Learning</h3>
+                        <p>Expertise in developing AI models, Machine Learning, Deep Learning, and Neural Networks for specialized applications</p>
+                        <ul class="expertise-list">
+                            <li><i class="fas fa-check text-success"></i> TensorFlow & PyTorch</li>
+                            <li><i class="fas fa-check text-success"></i> Computer Vision</li>
+                            <li><i class="fas fa-check text-success"></i> Natural Language Processing</li>
+                            <li><i class="fas fa-check text-success"></i> Predictive Analytics</li>
+                        </ul>
+                        {% endif %}
+                    </div>
+                </div>
+                
+                <div class="col-lg-6 col-md-6">
+                    <div class="expertise-card">
+                        <div class="expertise-icon">
+                            <i class="fas fa-code"></i>
+                        </div>
+                        {% if lang == 'th' %}
+                        <h3>Software Development</h3>
+                        <p>การพัฒนาซอฟต์แวร์และเว็บแอปพลิเคชันด้วยเทคโนโลยีทันสมัย รองรับการทำงานบนทุกแพลตฟอร์ม</p>
+                        <ul class="expertise-list">
+                            <li><i class="fas fa-check text-success"></i> Python, JavaScript, React</li>
+                            <li><i class="fas fa-check text-success"></i> Cloud Computing (AWS, GCP)</li>
+                            <li><i class="fas fa-check text-success"></i> Database Management</li>
+                            <li><i class="fas fa-check text-success"></i> API Development</li>
+                        </ul>
+                        {% else %}
+                        <h3>Software Development</h3>
+                        <p>Software and web application development with modern technology, supporting multi-platform operations</p>
+                        <ul class="expertise-list">
+                            <li><i class="fas fa-check text-success"></i> Python, JavaScript, React</li>
+                            <li><i class="fas fa-check text-success"></i> Cloud Computing (AWS, GCP)</li>
+                            <li><i class="fas fa-check text-success"></i> Database Management</li>
+                            <li><i class="fas fa-check text-success"></i> API Development</li>
+                        </ul>
+                        {% endif %}
+                    </div>
+                </div>
+                
+                <div class="col-lg-6 col-md-6">
+                    <div class="expertise-card">
+                        <div class="expertise-icon">
+                            <i class="fas fa-comments"></i>
+                        </div>
+                        {% if lang == 'th' %}
+                        <h3>Conversational AI</h3>
+                        <p>การสร้างระบบแชทบอทและ Conversational AI ที่เข้าใจภาษาไทยและอังกฤษ พร้อมการเรียนรู้แบบต่อเนื่อง</p>
+                        <ul class="expertise-list">
+                            <li><i class="fas fa-check text-success"></i> Multi-language Support</li>
+                            <li><i class="fas fa-check text-success"></i> Intent Recognition</li>
+                            <li><i class="fas fa-check text-success"></i> Context Understanding</li>
+                            <li><i class="fas fa-check text-success"></i> Integration Capabilities</li>
+                        </ul>
+                        {% else %}
+                        <h3>Conversational AI</h3>
+                        <p>Creating chatbot and Conversational AI systems that understand Thai and English with continuous learning capabilities</p>
+                        <ul class="expertise-list">
+                            <li><i class="fas fa-check text-success"></i> Multi-language Support</li>
+                            <li><i class="fas fa-check text-success"></i> Intent Recognition</li>
+                            <li><i class="fas fa-check text-success"></i> Context Understanding</li>
+                            <li><i class="fas fa-check text-success"></i> Integration Capabilities</li>
+                        </ul>
+                        {% endif %}
+                    </div>
+                </div>
+                
+                <div class="col-lg-6 col-md-6">
+                    <div class="expertise-card">
+                        <div class="expertise-icon">
+                            <i class="fas fa-cogs"></i>
+                        </div>
+                        {% if lang == 'th' %}
+                        <h3>System Integration</h3>
+                        <p>การประสานและเชื่อมต่อ AI เข้ากับระบบเดิม เพื่อสร้าง Workflow อัตโนมัติและเพิ่มประสิทธิภาพการทำงาน</p>
+                        <ul class="expertise-list">
+                            <li><i class="fas fa-check text-success"></i> ERP & CRM Integration</li>
+                            <li><i class="fas fa-check text-success"></i> Workflow Automation</li>
+                            <li><i class="fas fa-check text-success"></i> Data Pipeline Design</li>
+                            <li><i class="fas fa-check text-success"></i> Legacy System Modernization</li>
+                        </ul>
+                        {% else %}
+                        <h3>System Integration</h3>
+                        <p>Integrating and connecting AI with existing systems to create automated workflows and improve operational efficiency</p>
+                        <ul class="expertise-list">
+                            <li><i class="fas fa-check text-success"></i> ERP & CRM Integration</li>
+                            <li><i class="fas fa-check text-success"></i> Workflow Automation</li>
+                            <li><i class="fas fa-check text-success"></i> Data Pipeline Design</li>
+                            <li><i class="fas fa-check text-success"></i> Legacy System Modernization</li>
+                        </ul>
+                        {% endif %}
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Team Section -->
+    <section class="team py-5">
+        <div class="container">
+            {% if lang == 'th' %}
+            <h2 class="section-title text-center mb-5">ทีมผู้เชี่ยวชาญ</h2>
+            {% else %}
+            <h2 class="section-title text-center mb-5">Expert Team</h2>
+            {% endif %}
+            
+            <div class="row justify-content-center g-4">
+                <div class="col-lg-4 col-md-6">
+                    <div class="team-member text-center">
+                        <div class="member-image">
+                            <img src="https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?w=300&h=300&fit=crop&crop=face&auto=format" 
+                                 alt="Fikree Hajiysuof" 
+                                 class="img-fluid rounded-circle">
+                        </div>
+                        <h3>Fikree Hajiysuof</h3>
+                        <p class="member-title">{% if lang == 'th' %}CEO & AI Engineer{% else %}CEO & AI Engineer{% endif %}</p>
+                        <p class="member-bio">
+                            {% if lang == 'th' %}
+                            ผู้เชี่ยวชาญด้าน AI และ Data Science มากกว่า 5 ปี เชี่ยวชาญในการพัฒนา Machine Learning Models และ AI Solutions สำหรับองค์กรต่างๆ
+                            {% else %}
+                            AI and Data Science specialist with over 5 years of experience, expert in developing Machine Learning Models and AI Solutions for various organizations.
+                            {% endif %}
+                        </p>
+                        <div class="member-skills">
+                            <span class="skill-tag">AI Development</span>
+                            <span class="skill-tag">Machine Learning</span>
+                            <span class="skill-tag">Data Science</span>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="col-lg-4 col-md-6">
+                    <div class="team-member text-center">
+                        <div class="member-image">
+                            <img src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=300&h=300&fit=crop&crop=face&auto=format" 
+                                 alt="Michael Rodriguez" 
+                                 class="img-fluid rounded-circle">
+                        </div>
+                        <h3>Michael Rodriguez</h3>
+                        <p class="member-title">{% if lang == 'th' %}CTO & Full-Stack Developer{% else %}CTO & Full-Stack Developer{% endif %}</p>
+                        <p class="member-bio">
+                            {% if lang == 'th' %}
+                            นักพัฒนาซอฟต์แวร์มืออาชีพที่เชี่ยวชาญในการสร้างเว็บแอปพลิเคชันและระบบ Backend ที่มีประสิทธิภาพสูง
+                            {% else %}
+                            Professional software developer specializing in creating high-performance web applications and backend systems.
+                            {% endif %}
+                        </p>
+                        <div class="member-skills">
+                            <span class="skill-tag">Full-Stack Development</span>
+                            <span class="skill-tag">Cloud Architecture</span>
+                            <span class="skill-tag">DevOps</span>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="col-lg-4 col-md-6">
+                    <div class="team-member text-center">
+                        <div class="member-image">
+                            <img src="https://images.unsplash.com/photo-1494790108755-2616b612b633?w=300&h=300&fit=crop&crop=face&auto=format" 
+                                 alt="Emma Patel" 
+                                 class="img-fluid rounded-circle">
+                        </div>
+                        <h3>Emma Patel</h3>
+                        <p class="member-title">{% if lang == 'th' %}Chief AI Officer{% else %}Chief AI Officer{% endif %}</p>
+                        <p class="member-bio">
+                            {% if lang == 'th' %}
+                            ผู้เชี่ยวชาญด้าน NLP และ Conversational AI ที่มีประสบการณ์ในการพัฒนาระบบแชทบอทขั้นสูงสำหรับหลายอุตสาหกรรม
+                            {% else %}
+                            NLP and Conversational AI specialist with experience in developing advanced chatbot systems for multiple industries.
+                            {% endif %}
+                        </p>
+                        <div class="member-skills">
+                            <span class="skill-tag">NLP</span>
+                            <span class="skill-tag">Chatbot Development</span>
+                            <span class="skill-tag">AI Research</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Values Section -->
+    <section class="values py-5 bg-light">
+        <div class="container">
+            {% if lang == 'th' %}
+            <h2 class="section-title text-center mb-5">หลักการทำงานของเรา</h2>
+            {% else %}
+            <h2 class="section-title text-center mb-5">Our Working Principles</h2>
+            {% endif %}
+            
+            <div class="row g-4">
+                <div class="col-lg-4 col-md-6">
+                    <div class="value-card text-center">
+                        <div class="value-icon">
+                            <i class="fas fa-lightbulb"></i>
+                        </div>
+                        {% if lang == 'th' %}
+                        <h3>นวัตกรรม</h3>
+                        <p>เราใช้เทคโนโลยีล้ำสมัยและมองหาวิธีการใหม่ๆ ในการแก้ปัญหาอย่างสร้างสรรค์</p>
+                        {% else %}
+                        <h3>Innovation</h3>
+                        <p>We use cutting-edge technology and seek new creative ways to solve problems</p>
+                        {% endif %}
+                    </div>
+                </div>
+                
+                <div class="col-lg-4 col-md-6">
+                    <div class="value-card text-center">
+                        <div class="value-icon">
+                            <i class="fas fa-users"></i>
+                        </div>
+                        {% if lang == 'th' %}
+                        <h3>ความร่วมมือ</h3>
+                        <p>เราทำงานร่วมกับลูกค้าอย่างใกล้ชิดเพื่อให้ได้ผลลัพธ์ที่ตรงกับความต้องการ</p>
+                        {% else %}
+                        <h3>Collaboration</h3>
+                        <p>We work closely with clients to achieve results that meet their needs</p>
+                        {% endif %}
+                    </div>
+                </div>
+                
+                <div class="col-lg-4 col-md-6">
+                    <div class="value-card text-center">
+                        <div class="value-icon">
+                            <i class="fas fa-trophy"></i>
+                        </div>
+                        {% if lang == 'th' %}
+                        <h3>คุณภาพ</h3>
+                        <p>เรามุ่งมั่นสร้างผลงานคุณภาพสูงที่ยั่งยืนและตอบโจทย์ในระยะยาว</p>
+                        {% else %}
+                        <h3>Quality</h3>
+                        <p>We are committed to creating high-quality, sustainable work that provides long-term solutions</p>
+                        {% endif %}
+                    </div>
+                </div>
+                
+                <div class="col-lg-4 col-md-6">
+                    <div class="value-card text-center">
+                        <div class="value-icon">
+                            <i class="fas fa-clock"></i>
+                        </div>
+                        {% if lang == 'th' %}
+                        <h3>ตรงต่อเวลา</h3>
+                        <p>เราเคารพเวลาของลูกค้าและมุ่งมั่นส่งมอบงานตามกำหนดเวลาที่ตกลง</p>
+                        {% else %}
+                        <h3>Punctuality</h3>
+                        <p>We respect client time and are committed to delivering work on agreed schedules</p>
+                        {% endif %}
+                    </div>
+                </div>
+                
+                <div class="col-lg-4 col-md-6">
+                    <div class="value-card text-center">
+                        <div class="value-icon">
+                            <i class="fas fa-handshake"></i>
+                        </div>
+                        {% if lang == 'th' %}
+                        <h3>ความไว้วางใจ</h3>
+                        <p>เราสร้างความสัมพันธ์ที่ยั่งยืนบนพื้นฐานของความโปร่งใสและความไว้วางใจ</p>
+                        {% else %}
+                        <h3>Trust</h3>
+                        <p>We build lasting relationships based on transparency and trust</p>
+                        {% endif %}
+                    </div>
+                </div>
+                
+                <div class="col-lg-4 col-md-6">
+                    <div class="value-card text-center">
+                        <div class="value-icon">
+                            <i class="fas fa-graduation-cap"></i>
+                        </div>
+                        {% if lang == 'th' %}
+                        <h3>การเรียนรู้</h3>
+                        <p>เราพัฒนาตนเองอย่างต่อเนื่องเพื่อติดตามเทคโนโลยีและเทรนด์ใหม่ๆ</p>
+                        {% else %}
+                        <h3>Learning</h3>
+                        <p>We continuously develop ourselves to keep up with new technologies and trends</p>
+                        {% endif %}
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Call to Action -->
+    <section class="cta-section py-5">
+        <div class="container text-center">
+            {% if lang == 'th' %}
+            <h2 class="mb-4">พร้อมที่จะร่วมงานกับเราแล้วหรือยัง?</h2>
+            <p class="lead mb-4">มาร่วมสร้างโซลูชัน AI ที่จะเปลี่ยนแปลงธุรกิจของคุณไปด้วยกัน</p>
+            {% else %}
+            <h2 class="mb-4">Ready to Work with Us?</h2>
+            <p class="lead mb-4">Let's create AI solutions that will transform your business together</p>
+            {% endif %}
+            
+            <div class="cta-buttons">
+                <a href="{{ url_for('contact') }}" class="btn btn-primary btn-lg me-3">
+                    {% if lang == 'th' %}เริ่มต้นโปรเจค{% else %}Start a Project{% endif %}
+                </a>
+                <a href="{{ url_for('services') }}" class="btn btn-outline-light btn-lg">
+                    {% if lang == 'th' %}ดูบริการทั้งหมด{% else %}View All Services{% endif %}
+                </a>
+            </div>
+        </div>
+    </section>
+</main>
 {% endblock %}

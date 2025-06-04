@@ -1,170 +1,374 @@
 {% extends "layout.html" %}
 
 {% block content %}
-<section class="hero">
-    <div class="container">
-        <div class="hero-content">
+<main>
+    <!-- Hero Section -->
+    <section class="hero-section">
+        <div class="container">
+            <div class="row align-items-center min-vh-100">
+                <div class="col-lg-6">
+                    <div class="hero-content">
+                        {% if lang == 'th' %}
+                        <h1 class="hero-title">
+                            รับพัฒนา<span class="accent-text">ซอฟต์แวร์ AI</span><br>
+                            แชทบอท และเว็บไซต์<br>
+                            <span class="highlight-text">มืออาชีพ</span>
+                        </h1>
+                        <p class="hero-subtitle">
+                            บริการครบวงจร: พัฒนาซอฟต์แวร์ปัญญาประดิษฐ์ สร้างระบบแชทบอท AI รับทำเว็บไซต์ responsive 
+                            และประสาน AI เข้ากับระบบเดิมขององค์กร เพื่อเพิ่มประสิทธิภาพการทำงาน
+                        </p>
+                        <div class="hero-features">
+                            <div class="feature-item">
+                                <i class="fas fa-robot text-accent"></i>
+                                <span>พัฒนาซอฟต์แวร์ AI Custom</span>
+                            </div>
+                            <div class="feature-item">
+                                <i class="fas fa-comments text-accent"></i>
+                                <span>ระบบแชทบอท AI อัจฉริยะ</span>
+                            </div>
+                            <div class="feature-item">
+                                <i class="fas fa-globe text-accent"></i>
+                                <span>รับทำเว็บไซต์ Modern</span>
+                            </div>
+                            <div class="feature-item">
+                                <i class="fas fa-cogs text-accent"></i>
+                                <span>ประสาน AI เข้าระบบองค์กร</span>
+                            </div>
+                        </div>
+                        {% else %}
+                        <h1 class="hero-title">
+                            Professional<span class="accent-text"> AI Software</span><br>
+                            Development & Chatbot<br>
+                            <span class="highlight-text">Solutions</span>
+                        </h1>
+                        <p class="hero-subtitle">
+                            Complete AI services: Custom AI software development, intelligent chatbot systems, 
+                            responsive web development, and seamless AI integration with existing business systems 
+                            to enhance organizational efficiency.
+                        </p>
+                        <div class="hero-features">
+                            <div class="feature-item">
+                                <i class="fas fa-robot text-accent"></i>
+                                <span>Custom AI Software Development</span>
+                            </div>
+                            <div class="feature-item">
+                                <i class="fas fa-comments text-accent"></i>
+                                <span>Intelligent Chatbot AI Systems</span>
+                            </div>
+                            <div class="feature-item">
+                                <i class="fas fa-globe text-accent"></i>
+                                <span>Modern Web Development</span>
+                            </div>
+                            <div class="feature-item">
+                                <i class="fas fa-cogs text-accent"></i>
+                                <span>AI Integration Solutions</span>
+                            </div>
+                        </div>
+                        {% endif %}
+                        
+                        <div class="hero-cta">
+                            <a href="{{ url_for('contact') }}" class="btn btn-primary btn-lg me-3">
+                                {% if lang == 'th' %}ปรึกษาฟรี{% else %}Free Consultation{% endif %}
+                            </a>
+                            <a href="{{ url_for('services') }}" class="btn btn-outline-light btn-lg">
+                                {% if lang == 'th' %}ดูบริการ{% else %}View Services{% endif %}
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-6">
+                    <div class="hero-image">
+                        <img src="https://images.unsplash.com/photo-1677442136019-21780ecad995?w=600&h=400&fit=crop&crop=center&auto=format" 
+                             alt="{% if lang == 'th' %}AI Technology และการพัฒนาซอฟต์แวร์{% else %}AI Technology and Software Development{% endif %}" 
+                             class="img-fluid rounded shadow-lg">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Services Section -->
+    <section class="services-overview py-5">
+        <div class="container">
             {% if lang == 'th' %}
-            <h1>เปลี่ยนธุรกิจด้วย <span class="highlight">AI อัจฉริยะ</span></h1>
-            <p>Lumaid นำเสนอโซลูชัน AI ล้ำสมัยที่ขับเคลื่อนนวัตกรรมและประสิทธิภาพสำหรับองค์กรทั่วโลก</p>
-            <div class="cta-buttons">
-                <a href="/services" class="btn btn-primary">สำรวจบริการ</a>
-                <a href="/contact" class="btn btn-secondary">ติดต่อเรา</a>
-            </div>
+            <h2 class="section-title text-center mb-5">บริการ AI Solutions ครบวงจร</h2>
             {% else %}
-            <h1>Transforming Business Through <span class="highlight">Intelligent AI</span></h1>
-            <p>Lumaid delivers cutting-edge AI solutions that drive innovation and efficiency for enterprises worldwide.</p>
-            <div class="cta-buttons">
-                <a href="/services" class="btn btn-primary">Explore Services</a>
-                <a href="/contact" class="btn btn-secondary">Get in Touch</a>
-            </div>
+            <h2 class="section-title text-center mb-5">Complete AI Solutions Services</h2>
             {% endif %}
-        </div>
-        <div class="hero-image">
-            <div class="image-placeholder">
-                <!-- This would be replaced with an actual image -->
-                {% if lang == 'th' %}
-                <div class="placeholder-text">ภาพแสดง AI</div>
-                {% else %}
-                <div class="placeholder-text">AI Visualization</div>
-                {% endif %}
-            </div>
-        </div>
-    </div>
-</section>
-
-<section class="features">
-    <div class="container">
-        {% if lang == 'th' %}
-        <h2 class="section-title">ความสามารถด้าน AI ของเรา</h2>
-        {% else %}
-        <h2 class="section-title">Our AI Capabilities</h2>
-        {% endif %}
-        <div class="feature-grid">
-            <div class="feature-card">
-                <div class="feature-icon">
-                    <div class="icon-placeholder">🤖</div>
-                </div>
-                {% if lang == 'th' %}
-                <h3>การเรียนรู้ของเครื่อง</h3>
-                <p>โมเดลการเรียนรู้ของเครื่องที่ปรับแต่งตามความต้องการและวัตถุประสงค์ทางธุรกิจของคุณ</p>
-                {% else %}
-                <h3>Machine Learning</h3>
-                <p>Custom machine learning models tailored to your specific business needs and objectives.</p>
-                {% endif %}
-            </div>
-            <div class="feature-card">
-                <div class="feature-icon">
-                    <div class="icon-placeholder">💬</div>
-                </div>
-                {% if lang == 'th' %}
-                <h3>การประมวลผลภาษาธรรมชาติ</h3>
-                <p>โซลูชัน NLP ขั้นสูงสำหรับการทำความเข้าใจและสร้างภาษามนุษย์ด้วยความแม่นยำ</p>
-                {% else %}
-                <h3>Natural Language Processing</h3>
-                <p>Advanced NLP solutions for understanding and generating human language with precision.</p>
-                {% endif %}
-            </div>
-            <div class="feature-card">
-                <div class="feature-icon">
-                    <div class="icon-placeholder">👁️</div>
-                </div>
-                {% if lang == 'th' %}
-                <h3>คอมพิวเตอร์วิชั่น</h3>
-                <p>ความสามารถในการวิเคราะห์ภาพและวิดีโอที่ซับซ้อนสำหรับการใช้งานที่หลากหลาย</p>
-                {% else %}
-                <h3>Computer Vision</h3>
-                <p>Sophisticated image and video analysis capabilities for diverse applications.</p>
-                {% endif %}
-            </div>
-            <div class="feature-card">
-                <div class="feature-icon">
-                    <div class="icon-placeholder">📊</div>
-                </div>
-                {% if lang == 'th' %}
-                <h3>การวิเคราะห์เชิงคาดการณ์</h3>
-                <p>การคาดการณ์ที่ขับเคลื่อนด้วยข้อมูลเพื่อช่วยให  %}
-                <h3>การวิเคราะห์เชิงคาดการณ์</h3>
-                <p>การคาดการณ์ที่ขับเคลื่อนด้วยข้อมูลเพื่อช่วยให้คุณตัดสินใจทางธุรกิจอย่างมีข้อมูล</p>
-                {% else %}
-                <h3>Predictive Analytics</h3>
-                <p>Data-driven forecasting to help you make informed business decisions.</p>
-                {% endif %}
-            </div>
-        </div>
-    </div>
-</section>
-
-<section class="clients">
-    <div class="container">
-        {% if lang == 'th' %}
-        <h2 class="section-title">ได้รับความไว้วางใจจากผู้นำในอุตสาหกรรม</h2>
-        {% else %}
-        <h2 class="section-title">Trusted by Industry Leaders</h2>
-        {% endif %}
-        <div class="client-logos">
-            <!-- These would be replaced with actual client logos -->
-            <div class="logo-placeholder">Client 1</div>
-            <div class="logo-placeholder">Client 2</div>
-            <div class="logo-placeholder">Client 3</div>
-            <div class="logo-placeholder">Client 4</div>
-            <div class="logo-placeholder">Client 5</div>
-        </div>
-    </div>
-</section>
-
-<!-- <section class="testimonials">
-    <div class="container">
-        {% if lang == 'th' %}
-        <h2 class="section-title">ลูกค้าของเราพูดถึงเราอย่างไร</h2>
-        {% else %}
-        <h2 class="section-title">What Our Clients Say</h2>
-        {% endif %}
-        <div class="testimonial-slider">
-            <div class="testimonial">
-                {% if lang == 'th' %}
-                <p class="quote">"โซลูชัน AI ของ Lumaid ได้เปลี่ยนแปลงการดำเนินธุรกิจของเรา ส่งผลให้ประสิทธิภาพเพิ่มขึ้น 40%"</p>
-                <div class="author">
-                    <div class="author-image">
-                   
-                        <div class="image-circle"></div>
-                    </div>
-                    <div class="author-info">
-                        <h4>สาราห์ จอห์นสัน</h4>
-                        <p>CTO, Global Innovations</p>
+            
+            <div class="row g-4">
+                <div class="col-lg-3 col-md-6">
+                    <div class="service-card">
+                        <div class="service-icon">
+                            <i class="fas fa-brain"></i>
+                        </div>
+                        {% if lang == 'th' %}
+                        <h3>พัฒนาซอฟต์แวร์ AI</h3>
+                        <p>สร้างระบบ AI แบบ Custom ตามความต้องการธุรกิจ Machine Learning, Deep Learning และ Neural Networks</p>
+                        {% else %}
+                        <h3>AI Software Development</h3>
+                        <p>Custom AI system development tailored to business needs. Machine Learning, Deep Learning, and Neural Networks solutions.</p>
+                        {% endif %}
                     </div>
                 </div>
-                {% else %}
-                <p class="quote">"Lumaid's AI solutions have transformed our business operations, resulting in a 40% increase in efficiency."</p>
-                <div class="author">
-                    <div class="author-image">
-                   
-                        <div class="image-circle"></div>
-                    </div>
-                    <div class="author-info">
-                        <h4>Sarah Johnson</h4>
-                        <p>CTO, Global Innovations</p>
+                
+                <div class="col-lg-3 col-md-6">
+                    <div class="service-card">
+                        <div class="service-icon">
+                            <i class="fas fa-robot"></i>
+                        </div>
+                        {% if lang == 'th' %}
+                        <h3>แชทบอท AI</h3>
+                        <p>พัฒนาระบบแชทบอทอัจฉริยะที่ตอบคำถามลูกค้าได้อย่างแม่นยำ พร้อม NLP และ Multi-language Support</p>
+                        {% else %}
+                        <h3>Chatbot AI Systems</h3>
+                        <p>Intelligent chatbot development with accurate customer response capabilities. NLP and Multi-language Support included.</p>
+                        {% endif %}
                     </div>
                 </div>
-                {% endif %}
+                
+                <div class="col-lg-3 col-md-6">
+                    <div class="service-card">
+                        <div class="service-icon">
+                            <i class="fas fa-code"></i>
+                        </div>
+                        {% if lang == 'th' %}
+                        <h3>รับทำเว็บไซต์</h3>
+                        <p>ออกแบบและพัฒนาเว็บไซต์ที่ทันสมัย Responsive Design พร้อมระบบจัดการเนื้อหาและ SEO Optimized</p>
+                        {% else %}
+                        <h3>Web Development</h3>
+                        <p>Modern website design and development with Responsive Design, content management systems, and SEO optimization.</p>
+                        {% endif %}
+                    </div>
+                </div>
+                
+                <div class="col-lg-3 col-md-6">
+                    <div class="service-card">
+                        <div class="service-icon">
+                            <i class="fas fa-puzzle-piece"></i>
+                        </div>
+                        {% if lang == 'th' %}
+                        <h3>ประสาน AI เข้าระบบ</h3>
+                        <p>เชื่อมต่อและประสาน AI เข้ากับระบบเดิมขององค์กร เพื่อ Automate กระบวนการทำงานและเพิ่มประสิทธิภาพ</p>
+                        {% else %}
+                        <h3>AI Integration</h3>
+                        <p>Connect and integrate AI with existing organizational systems to automate workflows and enhance operational efficiency.</p>
+                        {% endif %}
+                    </div>
+                </div>
             </div>
         </div>
-    </div>
-</section> -->
+    </section>
 
-<section class="cta-section">
-    <div class="container">
-        <div class="cta-content">
+    <!-- Why Choose Us Section -->
+    <section class="why-choose-us py-5 bg-light">
+        <div class="container">
+            <div class="row align-items-center">
+                <div class="col-lg-6">
+                    {% if lang == 'th' %}
+                    <h2 class="section-title">ทำไมต้องเลือก Lumaid AI Solutions?</h2>
+                    <p class="lead">เราคือทีมผู้เชี่ยวชาญด้าน AI และการพัฒนาซอฟต์แวร์ที่มีประสบการณ์จริงในการสร้างโซลูชันที่ตอบโจทย์ธุรกิจ</p>
+                    {% else %}
+                    <h2 class="section-title">Why Choose Lumaid AI Solutions?</h2>
+                    <p class="lead">We are a team of AI and software development specialists with real experience in creating solutions that meet business needs.</p>
+                    {% endif %}
+                    
+                    <div class="advantages">
+                        <div class="advantage-item">
+                            <i class="fas fa-check-circle text-success"></i>
+                            {% if lang == 'th' %}
+                            <span><strong>ผู้เชี่ยวชาญ AI มืออาชีพ</strong> - ทีมงานที่มีความเชี่ยวชาญด้าน Machine Learning และ AI Development</span>
+                            {% else %}
+                            <span><strong>Professional AI Specialists</strong> - Expert team in Machine Learning and AI Development</span>
+                            {% endif %}
+                        </div>
+                        <div class="advantage-item">
+                            <i class="fas fa-check-circle text-success"></i>
+                            {% if lang == 'th' %}
+                            <span><strong>บริการครบวงจร</strong> - ตั้งแต่การวางแผน ออกแบบ พัฒนา จนถึงการดูแลระบบ</span>
+                            {% else %}
+                            <span><strong>Complete Service</strong> - From planning, design, development to system maintenance</span>
+                            {% endif %}
+                        </div>
+                        <div class="advantage-item">
+                            <i class="fas fa-check-circle text-success"></i>
+                            {% if lang == 'th' %}
+                            <span><strong>Custom Solutions</strong> - ออกแบบระบบตามความต้องการเฉพาะของแต่ละองค์กร</span>
+                            {% else %}
+                            <span><strong>Custom Solutions</strong> - Tailored systems for specific organizational needs</span>
+                            {% endif %}
+                        </div>
+                        <div class="advantage-item">
+                            <i class="fas fa-check-circle text-success"></i>
+                            {% if lang == 'th' %}
+                            <span><strong>Support หลังการขาย</strong> - การดูแลและซัพพอร์ตระยะยาวหลังการส่งมอบ</span>
+                            {% else %}
+                            <span><strong>After-sales Support</strong> - Long-term care and support after delivery</span>
+                            {% endif %}
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-6">
+                    <img src="https://images.unsplash.com/photo-1552664730-d307ca884978?w=600&h=400&fit=crop&crop=center&auto=format" 
+                         alt="{% if lang == 'th' %}ทีมงาน AI Development{% else %}AI Development Team{% endif %}" 
+                         class="img-fluid rounded shadow">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Technologies Section -->
+    <section class="technologies py-5">
+        <div class="container">
             {% if lang == 'th' %}
-            <h2>พร้อมที่จะเปลี่ยนแปลงธุรกิจของคุณด้วย AI?</h2>
-            <p>นัดหมายปรึกษากับผู้เชี่ยวชาญของเราเพื่อค้นพบว่า Lumaid สามารถช่วยให้คุณบรรลุเป้าหมายได้อย่างไร</p>
-            <a href="/contact" class="btn btn-primary">ติดต่อเราวันนี้</a>
+            <h2 class="section-title text-center mb-5">เทคโนโลยีที่เราใช้</h2>
             {% else %}
-            <h2>Ready to Transform Your Business with AI?</h2>
-            <p>Schedule a consultation with our experts to discover how Lumaid can help you achieve your goals.</p>
-            <a href="/contact" class="btn btn-primary">Contact Us Today</a>
+            <h2 class="section-title text-center mb-5">Technologies We Use</h2>
             {% endif %}
+            
+            <div class="row text-center">
+                <div class="col-lg-2 col-md-4 col-6 mb-4">
+                    <div class="tech-item">
+                        <i class="fab fa-python fa-3x text-primary"></i>
+                        <p class="mt-2">Python</p>
+                    </div>
+                </div>
+                <div class="col-lg-2 col-md-4 col-6 mb-4">
+                    <div class="tech-item">
+                        <i class="fas fa-brain fa-3x text-success"></i>
+                        <p class="mt-2">TensorFlow</p>
+                    </div>
+                </div>
+                <div class="col-lg-2 col-md-4 col-6 mb-4">
+                    <div class="tech-item">
+                        <i class="fas fa-robot fa-3x text-warning"></i>
+                        <p class="mt-2">OpenAI</p>
+                    </div>
+                </div>
+                <div class="col-lg-2 col-md-4 col-6 mb-4">
+                    <div class="tech-item">
+                        <i class="fab fa-react fa-3x text-info"></i>
+                        <p class="mt-2">React</p>
+                    </div>
+                </div>
+                <div class="col-lg-2 col-md-4 col-6 mb-4">
+                    <div class="tech-item">
+                        <i class="fab fa-node-js fa-3x text-success"></i>
+                        <p class="mt-2">Node.js</p>
+                    </div>
+                </div>
+                <div class="col-lg-2 col-md-4 col-6 mb-4">
+                    <div class="tech-item">
+                        <i class="fas fa-database fa-3x text-secondary"></i>
+                        <p class="mt-2">Database</p>
+                    </div>
+                </div>
+            </div>
         </div>
-    </div>
-</section>
+    </section>
+
+    <!-- Success Cases Section -->
+    <section class="success-cases py-5 bg-light">
+        <div class="container">
+            {% if lang == 'th' %}
+            <h2 class="section-title text-center mb-5">ตัวอย่างผลงานที่ประสบความสำเร็จ</h2>
+            {% else %}
+            <h2 class="section-title text-center mb-5">Successful Case Studies</h2>
+            {% endif %}
+            
+            <div class="row g-4">
+                <div class="col-lg-4 col-md-6">
+                    <div class="case-card">
+                        <div class="case-icon">
+                            <i class="fas fa-shopping-cart"></i>
+                        </div>
+                        {% if lang == 'th' %}
+                        <h3>ระบบแชทบอท E-commerce</h3>
+                        <p>พัฒนาแชทบอท AI สำหรับร้านค้าออนไลน์ ช่วยตอบคำถามลูกค้าและแนะนำสินค้า เพิ่มยอดขายได้ 35%</p>
+                        <div class="case-stats">
+                            <span class="stat-number">35%</span>
+                            <span class="stat-label">เพิ่มยอดขาย</span>
+                        </div>
+                        {% else %}
+                        <h3>E-commerce Chatbot System</h3>
+                        <p>Developed AI chatbot for online stores to answer customer queries and recommend products, increasing sales by 35%</p>
+                        <div class="case-stats">
+                            <span class="stat-number">35%</span>
+                            <span class="stat-label">Sales Increase</span>
+                        </div>
+                        {% endif %}
+                    </div>
+                </div>
+                
+                <div class="col-lg-4 col-md-6">
+                    <div class="case-card">
+                        <div class="case-icon">
+                            <i class="fas fa-hospital"></i>
+                        </div>
+                        {% if lang == 'th' %}
+                        <h3>ระบบ AI วิเคราะห์ข้อมูลผู้ป่วย</h3>
+                        <p>สร้างระบบ AI ช่วยแพทย์วิเคราะห์ข้อมูลผู้ป่วย เพิ่มความแม่นยำในการวินิจฉัยได้ 28%</p>
+                        <div class="case-stats">
+                            <span class="stat-number">28%</span>
+                            <span class="stat-label">เพิ่มความแม่นยำ</span>
+                        </div>
+                        {% else %}
+                        <h3>AI Patient Data Analysis</h3>
+                        <p>Created AI system to help doctors analyze patient data, improving diagnostic accuracy by 28%</p>
+                        <div class="case-stats">
+                            <span class="stat-number">28%</span>
+                            <span class="stat-label">Accuracy Improvement</span>
+                        </div>
+                        {% endif %}
+                    </div>
+                </div>
+                
+                <div class="col-lg-4 col-md-6">
+                    <div class="case-card">
+                        <div class="case-icon">
+                            <i class="fas fa-industry"></i>
+                        </div>
+                        {% if lang == 'th' %}
+                        <h3>ระบบ AI ควบคุมการผลิต</h3>
+                        <p>ประสาน AI เข้าระบบการผลิตในโรงงาน ลดของเสียและเพิ่มประสิทธิภาพการผลิตได้ 42%</p>
+                        <div class="case-stats">
+                            <span class="stat-number">42%</span>
+                            <span class="stat-label">เพิ่มประสิทธิภาพ</span>
+                        </div>
+                        {% else %}
+                        <h3>AI Production Control System</h3>
+                        <p>Integrated AI into factory production systems, reducing waste and improving efficiency by 42%</p>
+                        <div class="case-stats">
+                            <span class="stat-number">42%</span>
+                            <span class="stat-label">Efficiency Boost</span>
+                        </div>
+                        {% endif %}
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA Section -->
+    <section class="cta-section py-5">
+        <div class="container text-center">
+            {% if lang == 'th' %}
+            <h2 class="mb-4">พร้อมที่จะเริ่มต้นโปรเจค AI ของคุณแล้วหรือยัง?</h2>
+            <p class="lead mb-4">ปรึกษาฟรีกับผู้เชี่ยวชาญ AI ของเรา เราจะช่วยวิเคราะห์ความต้องการและเสนอโซลูชันที่เหมาะสมกับธุรกิจของคุณ</p>
+            {% else %}
+            <h2 class="mb-4">Ready to Start Your AI Project?</h2>
+            <p class="lead mb-4">Get free consultation with our AI specialists. We'll help analyze your needs and propose the right solution for your business.</p>
+            {% endif %}
+            
+            <a href="{{ url_for('contact') }}" class="btn btn-primary btn-lg me-3">
+                {% if lang == 'th' %}ปรึกษาฟรีวันนี้{% else %}Free Consultation Today{% endif %}
+            </a>
+            <a href="tel:+66980352350" class="btn btn-outline-light btn-lg">
+                <i class="fas fa-phone me-2"></i>
+                {% if lang == 'th' %}โทร 098-035-2350{% else %}Call 098-035-2350{% endif %}
+            </a>
+        </div>
+    </section>
+</main>
 {% endblock %}

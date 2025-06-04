@@ -1,148 +1,522 @@
 {% extends "layout.html" %}
 
 {% block content %}
-<section class="page-header">
-    <div class="container">
-        {% if lang == 'th' %}
-        <h1>บริการด้าน AI ของเรา</h1>
-        <p>โซลูชัน AI ครบวงจรที่ปรับให้เหมาะกับความต้องการทางธุรกิจของคุณ</p>
-        {% else %}
-        <h1>Our AI Services</h1>
-        <p>Comprehensive AI solutions tailored to your business needs</p>
-        {% endif %}
-    </div>
-</section>
-
-<section class="services-grid" id="ai-consulting">
-    <div class="container">
-        <div class="service-card">
-            <div class="service-content">
-                {% if lang == 'th' %}
-                <h2>ที่ปรึกษาด้าน AI</h2>
-                <p>ที่ปรึกษาผู้เชี่ยวชาญของเราทำงานร่วมกับคุณเพื่อระบุโอกาสในการนำ AI มาใช้ในธุรกิจของคุณ สร้างแผนกลยุทธ์สำหรับการเปลี่ยนแปลงทางดิจิทัล</p>
-                <ul class="service-features">
-                    <li>การประเมินความพร้อมด้าน AI</li>
-                    <li>การเลือกเทคโนโลยี</li>
-                    <li>การวางแผนการนำไปใช้</li>
-                    <li>การวิเคราะห์ ROI</li>
-                </ul>
-                <a href="/contact" class="btn btn-primary">เริ่มต้นใช้งาน</a>
-                {% else %}
-                <h2>AI Consulting</h2>
-                <p>Our expert consultants work with you to identify opportunities for AI implementation in your business, creating a strategic roadmap for digital transformation.</p>
-                <ul class="service-features">
-                    <li>AI Readiness Assessment</li>
-                    <li>Technology Selection</li>
-                    <li>Implementation Planning</li>
-                    <li>ROI Analysis</li>
-                </ul>
-                <a href="/contact" class="btn btn-primary">Get Started</a>
-                {% endif %}
-            </div>
-            <div class="service-image">
-                <div class="image-placeholder">
+<main>
+    <!-- Services Hero Section -->
+    <section class="services-hero py-5 bg-primary text-white">
+        <div class="container">
+            <div class="row text-center">
+                <div class="col-lg-8 mx-auto">
                     {% if lang == 'th' %}
-                    ภาพที่ปรึกษาด้าน AI
+                    <h1 class="display-4 mb-4">บริการ AI Solutions ครบวงจร</h1>
+                    <p class="lead">
+                        เราให้บริการพัฒนาซอฟต์แวร์ AI, ระบบแชทบอท, รับทำเว็บไซต์, และประสาน AI เข้าระบบองค์กร 
+                        ด้วยทีมผู้เชี่ยวชาญมากประสบการณ์
+                    </p>
                     {% else %}
-                    AI Consulting Image
+                    <h1 class="display-4 mb-4">Complete AI Solutions Services</h1>
+                    <p class="lead">
+                        We provide AI software development, chatbot systems, web development, and AI integration services 
+                        with our experienced specialist team.
+                    </p>
                     {% endif %}
                 </div>
             </div>
         </div>
-    </div>
-</section>
+    </section>
 
-<section class="services-grid" id="custom-solutions">
-    <div class="container">
-        <div class="service-card reverse">
-            <div class="service-content">
-                {% if lang == 'th' %}
-                <h2>โซลูชัน AI เฉพาะทาง</h2>
-                <p>เราพัฒนาโซลูชัน AI เฉพาะทางที่ออกแบบมาโดยเฉพาะสำหรับความท้าทายและวัตถุประสงค์ทางธุรกิจที่ไม่เหมือนใครของคุณ</p>
-                <ul class="service-features">
-                    <li>โมเดลการเรียนรู้ของเครื่องแบบกำหนดเอง</li>
-                    <li>การประมวลผลภาษาธรรมชาติ</li>
-                    <li>ระบบคอมพิวเตอร์วิชั่น</li>
-                    <li>การวิเคราะห์เชิงคาดการณ์</li>
-                </ul>
-                <a href="/contact" class="btn btn-primary">เรียนรู้เพิ่มเติม</a>
-                {% else %}
-                <h2>Custom AI Solutions</h2>
-                <p>We develop bespoke AI solutions designed specifically for your unique business challenges and objectives.</p>
-                <ul class="service-features">
-                    <li>Custom Machine Learning Models</li>
-                    <li>Natural Language Processing</li>
-                    <li>Computer Vision Systems</li>
-                    <li>Predictive Analytics</li>
-                </ul>
-                <a href="/contact" class="btn btn-primary">Learn More</a>
-                {% endif %}
-            </div>
-            <div class="service-image">
-                <div class="image-placeholder">
-                    {% if lang == 'th' %}
-                    ภาพโซลูชันเฉพาะทาง
-                    {% else %}
-                    Custom Solutions Image
-                    {% endif %}
+    <!-- Main Services Section -->
+    <section class="main-services py-5">
+        <div class="container">
+            <div class="row g-5">
+                <!-- AI Software Development -->
+                <div class="col-lg-6">
+                    <div class="service-detail-card h-100">
+                        <div class="service-header">
+                            <div class="service-icon-large">
+                                <i class="fas fa-brain"></i>
+                            </div>
+                            {% if lang == 'th' %}
+                            <h2>พัฒนาซอฟต์แวร์ AI</h2>
+                            <p class="service-subtitle">สร้างระบบปัญญาประดิษฐ์แบบ Custom ตามความต้องการธุรกิจ</p>
+                            {% else %}
+                            <h2>AI Software Development</h2>
+                            <p class="service-subtitle">Custom artificial intelligence system development for business needs</p>
+                            {% endif %}
+                        </div>
+                        
+                        <div class="service-image mb-4">
+                            <img src="https://images.unsplash.com/photo-1555949963-aa79dcee981c?w=600&h=300&fit=crop&crop=center&auto=format" 
+                                 alt="{% if lang == 'th' %}การพัฒนาซอฟต์แวร์ AI{% else %}AI Software Development{% endif %}" 
+                                 class="img-fluid rounded">
+                        </div>
+                        
+                        <div class="service-content">
+                            {% if lang == 'th' %}
+                            <h3>รายละเอียดบริการ:</h3>
+                            <ul class="service-features">
+                                <li><i class="fas fa-check text-success"></i> Machine Learning Models</li>
+                                <li><i class="fas fa-check text-success"></i> Deep Learning Systems</li>
+                                <li><i class="fas fa-check text-success"></i> Neural Networks</li>
+                                <li><i class="fas fa-check text-success"></i> Computer Vision</li>
+                                <li><i class="fas fa-check text-success"></i> Natural Language Processing</li>
+                                <li><i class="fas fa-check text-success"></i> Predictive Analytics</li>
+                            </ul>
+                            
+                            <h4>เหมาะสำหรับ:</h4>
+                            <p>องค์กรที่ต้องการระบบ AI เฉพาะทาง เช่น ระบบวิเคราะห์ข้อมูล, ระบบคาดการณ์, ระบบรู้จำภาพ, หรือระบบประมวลผลภาษา</p>
+                            {% else %}
+                            <h3>Service Details:</h3>
+                            <ul class="service-features">
+                                <li><i class="fas fa-check text-success"></i> Machine Learning Models</li>
+                                <li><i class="fas fa-check text-success"></i> Deep Learning Systems</li>
+                                <li><i class="fas fa-check text-success"></i> Neural Networks</li>
+                                <li><i class="fas fa-check text-success"></i> Computer Vision</li>
+                                <li><i class="fas fa-check text-success"></i> Natural Language Processing</li>
+                                <li><i class="fas fa-check text-success"></i> Predictive Analytics</li>
+                            </ul>
+                            
+                            <h4>Suitable for:</h4>
+                            <p>Organizations requiring specialized AI systems such as data analysis, prediction systems, image recognition, or language processing systems.</p>
+                            {% endif %}
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Chatbot AI -->
+                <div class="col-lg-6">
+                    <div class="service-detail-card h-100">
+                        <div class="service-header">
+                            <div class="service-icon-large">
+                                <i class="fas fa-robot"></i>
+                            </div>
+                            {% if lang == 'th' %}
+                            <h2>ระบบแชทบอท AI</h2>
+                            <p class="service-subtitle">พัฒนาแชทบอทอัจฉริยะที่ตอบคำถามและให้บริการลูกค้าได้ 24/7</p>
+                            {% else %}
+                            <h2>Chatbot AI Systems</h2>
+                            <p class="service-subtitle">Intelligent chatbot development for 24/7 customer service and support</p>
+                            {% endif %}
+                        </div>
+                        
+                        <div class="service-image mb-4">
+                            <img src="https://images.unsplash.com/photo-1531746790731-6c087fecd65a?w=600&h=300&fit=crop&crop=center&auto=format" 
+                                 alt="{% if lang == 'th' %}ระบบแชทบอท AI{% else %}AI Chatbot System{% endif %}" 
+                                 class="img-fluid rounded">
+                        </div>
+                        
+                        <div class="service-content">
+                            {% if lang == 'th' %}
+                            <h3>คุณสมบัติหลัก:</h3>
+                            <ul class="service-features">
+                                <li><i class="fas fa-check text-success"></i> เข้าใจภาษาไทยและอังกฤษ</li>
+                                <li><i class="fas fa-check text-success"></i> ตอบคำถามอัตโนมัติ</li>
+                                <li><i class="fas fa-check text-success"></i> เรียนรู้จากการสนทนา</li>
+                                <li><i class="fas fa-check text-success"></i> เชื่อมต่อฐานข้อมูลสินค้า</li>
+                                <li><i class="fas fa-check text-success"></i> รายงานสถิติการใช้งาน</li>
+                                <li><i class="fas fa-check text-success"></i> ส่งต่อไปยังพนักงานจริง</li>
+                            </ul>
+                            
+                            <h4>เหมาะสำหรับ:</h4>
+                            <p>ธุรกิจออนไลน์, E-commerce, บริษัทบริการ, โรงพยาบาล, หรือองค์กรที่ต้องการลดภาระงานตอบคำถามลูกค้า</p>
+                            {% else %}
+                            <h3>Key Features:</h3>
+                            <ul class="service-features">
+                                <li><i class="fas fa-check text-success"></i> Thai and English language support</li>
+                                <li><i class="fas fa-check text-success"></i> Automated responses</li>
+                                <li><i class="fas fa-check text-success"></i> Learning from conversations</li>
+                                <li><i class="fas fa-check text-success"></i> Product database integration</li>
+                                <li><i class="fas fa-check text-success"></i> Usage analytics reporting</li>
+                                <li><i class="fas fa-check text-success"></i> Handoff to human agents</li>
+                            </ul>
+                            
+                            <h4>Suitable for:</h4>
+                            <p>Online businesses, E-commerce, service companies, hospitals, or organizations wanting to reduce customer service workload.</p>
+                            {% endif %}
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Web Development -->
+                <div class="col-lg-6">
+                    <div class="service-detail-card h-100">
+                        <div class="service-header">
+                            <div class="service-icon-large">
+                                <i class="fas fa-code"></i>
+                            </div>
+                            {% if lang == 'th' %}
+                            <h2>รับทำเว็บไซต์</h2>
+                            <p class="service-subtitle">ออกแบบและพัฒนาเว็บไซต์ทันสมัย Responsive และ SEO Optimized</p>
+                            {% else %}
+                            <h2>Web Development</h2>
+                            <p class="service-subtitle">Modern website design and development with responsive and SEO optimization</p>
+                            {% endif %}
+                        </div>
+                        
+                        <div class="service-image mb-4">
+                            <img src="https://images.unsplash.com/photo-1467232004584-a241de8bcf5d?w=600&h=300&fit=crop&crop=center&auto=format" 
+                                 alt="{% if lang == 'th' %}การพัฒนาเว็บไซต์{% else %}Web Development{% endif %}" 
+                                 class="img-fluid rounded">
+                        </div>
+                        
+                        <div class="service-content">
+                            {% if lang == 'th' %}
+                            <h3>ประเภทเว็บไซต์:</h3>
+                            <ul class="service-features">
+                                <li><i class="fas fa-check text-success"></i> เว็บไซต์องค์กร (Corporate Website)</li>
+                                <li><i class="fas fa-check text-success"></i> เว็บไซต์อีคอมเมิร์ซ</li>
+                                <li><i class="fas fa-check text-success"></i> เว็บแอปพลิเคชัน</li>
+                                <li><i class="fas fa-check text-success"></i> Landing Page</li>
+                                <li><i class="fas fa-check text-success"></i> Blog/CMS</li>
+                                <li><i class="fas fa-check text-success"></i> Portfolio Website</li>
+                            </ul>
+                            
+                            <h4>รวมถึง:</h4>
+                            <p>Responsive Design, SEO Optimization, ระบบจัดการเนื้อหา, ระบบสมาชิก, Payment Gateway, SSL Certificate และการดูแลระบบ</p>
+                            {% else %}
+                            <h3>Website Types:</h3>
+                            <ul class="service-features">
+                                <li><i class="fas fa-check text-success"></i> Corporate Websites</li>
+                                <li><i class="fas fa-check text-success"></i> E-commerce Websites</li>
+                                <li><i class="fas fa-check text-success"></i> Web Applications</li>
+                                <li><i class="fas fa-check text-success"></i> Landing Pages</li>
+                                <li><i class="fas fa-check text-success"></i> Blog/CMS</li>
+                                <li><i class="fas fa-check text-success"></i> Portfolio Websites</li>
+                            </ul>
+                            
+                            <h4>Including:</h4>
+                            <p>Responsive Design, SEO Optimization, content management systems, membership systems, Payment Gateway, SSL Certificate and system maintenance.</p>
+                            {% endif %}
+                        </div>
+                    </div>
+                </div>
+
+                <!-- AI Integration -->
+                <div class="col-lg-6">
+                    <div class="service-detail-card h-100">
+                        <div class="service-header">
+                            <div class="service-icon-large">
+                                <i class="fas fa-puzzle-piece"></i>
+                            </div>
+                            {% if lang == 'th' %}
+                            <h2>ประสาน AI เข้าระบบองค์กร</h2>
+                            <p class="service-subtitle">เชื่อมต่อ AI เข้ากับระบบเดิม เพื่อ Automate และเพิ่มประสิทธิภาพ</p>
+                            {% else %}
+                            <h2>AI Integration Solutions</h2>
+                            <p class="service-subtitle">Connect AI with existing systems for automation and efficiency enhancement</p>
+                            {% endif %}
+                        </div>
+                        
+                        <div class="service-image mb-4">
+                            <img src="https://images.unsplash.com/photo-1560472354-b33ff0c44a43?w=600&h=300&fit=crop&crop=center&auto=format" 
+                                 alt="{% if lang == 'th' %}การประสาน AI เข้าระบบ{% else %}AI Integration{% endif %}" 
+                                 class="img-fluid rounded">
+                        </div>
+                        
+                        <div class="service-content">
+                            {% if lang == 'th' %}
+                            <h3>บริการประสาน AI:</h3>
+                            <ul class="service-features">
+                                <li><i class="fas fa-check text-success"></i> ประสาน AI กับระบบ ERP</li>
+                                <li><i class="fas fa-check text-success"></i> ประสาน AI กับระบบ CRM</li>
+                                <li><i class="fas fa-check text-success"></i> ระบบ Workflow Automation</li>
+                                <li><i class="fas fa-check text-success"></i> ระบบรายงานอัตโนมัติ</li>
+                                <li><i class="fas fa-check text-success"></i> API Integration</li>
+                                <li><i class="fas fa-check text-success"></i> Data Pipeline Setup</li>
+                            </ul>
+                            
+                            <h4>ประโยชน์:</h4>
+                            <p>ลดการทำงานซ้ำซากจำเจ, เพิ่มความแม่นยำ, ประหยัดเวลาและค่าใช้จ่าย, สร้างรายงานแบบ Real-time และตัดสินใจได้เร็วขึ้น</p>
+                            {% else %}
+                            <h3>AI Integration Services:</h3>
+                            <ul class="service-features">
+                                <li><i class="fas fa-check text-success"></i> AI integration with ERP systems</li>
+                                <li><i class="fas fa-check text-success"></i> AI integration with CRM systems</li>
+                                <li><i class="fas fa-check text-success"></i> Workflow Automation systems</li>
+                                <li><i class="fas fa-check text-success"></i> Automated reporting systems</li>
+                                <li><i class="fas fa-check text-success"></i> API Integration</li>
+                                <li><i class="fas fa-check text-success"></i> Data Pipeline Setup</li>
+                            </ul>
+                            
+                            <h4>Benefits:</h4>
+                            <p>Reduce repetitive tasks, increase accuracy, save time and costs, create real-time reports and faster decision making.</p>
+                            {% endif %}
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>
-    </div>
-</section>
+    </section>
 
-<section class="services-grid" id="integration">
-    <div class="container">
-        <div class="service-card">
-            <div class="service-content">
-                {% if lang == 'th' %}
-                <h2>การผสานรวม AI</h2>
-                <p>ผสานรวมความสามารถของ AI เข้ากับระบบและขั้นตอนการทำงานที่มีอยู่ของคุณอย่างราบรื่นเพื่อเพิ่มประสิทธิภาพและการตัดสินใจ</p>
-                <ul class="service-features">
-                    <li>การผสานรวมกับระบบเดิม</li>
-                    <li>การพัฒนา API</li>
-                    <li>การทำงานอัตโนมัติ</li>
-                    <li>การตั้งค่าไปป์ไลน์ข้อมูล</li>
-                </ul>
-                <a href="/contact" class="btn btn-primary">สำรวจตัวเลือก</a>
-                {% else %}
-                <h2>AI Integration</h2>
-                <p>Seamlessly integrate AI capabilities into your existing systems and workflows to enhance productivity and decision-making.</p>
-                <ul class="service-features">
-                    <li>Legacy System Integration</li>
-                    <li>API Development</li>
-                    <li>Workflow Automation</li>
-                    <li>Data Pipeline Setup</li>
-                </ul>
-                <a href="/contact" class="btn btn-primary">Explore Options</a>
-                {% endif %}
-            </div>
-            <div class="service-image">
-                <div class="image-placeholder">
-                    {% if lang == 'th' %}
-                    ภาพการผสานรวม AI
-                    {% else %}
-                    AI Integration Image
-                    {% endif %}
-                </div>
-            </div>
-        </div>
-    </div>
-</section>
-
-<section class="cta-section">
-    <div class="container">
-        <div class="cta-content">
+    <!-- Process Section -->
+    <section class="process-section py-5 bg-light">
+        <div class="container">
             {% if lang == 'th' %}
-            <h2>พร้อมที่จะใช้พลังของ AI?</h2>
-            <p>ติดต่อทีมของเราวันนี้เพื่อพูดคุยว่าบริการของเราสามารถเป็นประโยชน์ต่อองค์กรของคุณได้อย่างไร</p>
-            <a href="/contact" class="btn btn-primary">ติดต่อเรา</a>
+            <h2 class="section-title text-center mb-5">ขั้นตอนการทำงานของเรา</h2>
             {% else %}
-            <h2>Ready to Harness the Power of AI?</h2>
-            <p>Contact our team today to discuss how our services can benefit your organization.</p>
-            <a href="/contact" class="btn btn-primary">Contact Us</a>
+            <h2 class="section-title text-center mb-5">Our Work Process</h2>
             {% endif %}
+            
+            <div class="row g-4">
+                <div class="col-lg-3 col-md-6">
+                    <div class="process-step text-center">
+                        <div class="process-number">1</div>
+                        {% if lang == 'th' %}
+                        <h3>ปรึกษาและวิเคราะห์</h3>
+                        <p>รับฟังความต้องการและวิเคราะห์ระบบปัจจุบัน เพื่อเสนอโซลูชันที่เหมาะสม</p>
+                        {% else %}
+                        <h3>Consultation & Analysis</h3>
+                        <p>Listen to requirements and analyze current systems to propose suitable solutions</p>
+                        {% endif %}
+                    </div>
+                </div>
+                
+                <div class="col-lg-3 col-md-6">
+                    <div class="process-step text-center">
+                        <div class="process-number">2</div>
+                        {% if lang == 'th' %}
+                        <h3>ออกแบบและวางแผน</h3>
+                        <p>สร้าง Mockup, Wireframe และวางแผนการพัฒนาระบบอย่างละเอียด</p>
+                        {% else %}
+                        <h3>Design & Planning</h3>
+                        <p>Create mockups, wireframes and detailed system development planning</p>
+                        {% endif %}
+                    </div>
+                </div>
+                
+                <div class="col-lg-3 col-md-6">
+                    <div class="process-step text-center">
+                        <div class="process-number">3</div>
+                        {% if lang == 'th' %}
+                        <h3>พัฒนาและทดสอบ</h3>
+                        <p>เริ่มพัฒนาระบบตามแผนและทดสอบการทำงานอย่างครอบคลุม</p>
+                        {% else %}
+                        <h3>Development & Testing</h3>
+                        <p>Start system development according to plan and comprehensive functionality testing</p>
+                        {% endif %}
+                    </div>
+                </div>
+                
+                <div class="col-lg-3 col-md-6">
+                    <div class="process-step text-center">
+                        <div class="process-number">4</div>
+                        {% if lang == 'th' %}
+                        <h3>ส่งมอบและดูแล</h3>
+                        <p>ส่งมอบระบบที่สมบูรณ์ พร้อมการอบรมและดูแลหลังการขาย</p>
+                        {% else %}
+                        <h3>Delivery & Support</h3>
+                        <p>Deliver complete system with training and after-sales support</p>
+                        {% endif %}
+                    </div>
+                </div>
+            </div>
         </div>
-    </div>
-</section>
+    </section>
+
+    <!-- Pricing Section -->
+    <section class="pricing-section py-5">
+        <div class="container">
+            {% if lang == 'th' %}
+            <h2 class="section-title text-center mb-5">แพ็คเกจบริการ</h2>
+            <p class="text-center mb-5">เลือกแพ็คเกจที่เหมาะสมกับความต้องการและงบประมาณของคุณ</p>
+            {% else %}
+            <h2 class="section-title text-center mb-5">Service Packages</h2>
+            <p class="text-center mb-5">Choose the package that fits your needs and budget</p>
+            {% endif %}
+            
+            <div class="row g-4">
+                <div class="col-lg-4 col-md-6">
+                    <div class="pricing-card">
+                        <div class="pricing-header">
+                            {% if lang == 'th' %}
+                            <h3>Starter</h3>
+                            <p>เริ่มต้นกับ AI</p>
+                            <div class="price">฿50,000 - ฿150,000</div>
+                            {% else %}
+                            <h3>Starter</h3>
+                            <p>Start with AI</p>
+                            <div class="price">฿50,000 - ฿150,000</div>
+                            {% endif %}
+                        </div>
+                        <ul class="pricing-features">
+                            {% if lang == 'th' %}
+                            <li><i class="fas fa-check"></i> แชทบอทพื้นฐาน</li>
+                            <li><i class="fas fa-check"></i> เว็บไซต์ 5-10 หน้า</li>
+                            <li><i class="fas fa-check"></i> Responsive Design</li>
+                            <li><i class="fas fa-check"></i> SEO เบื้องต้น</li>
+                            <li><i class="fas fa-check"></i> Support 3 เดือน</li>
+                            {% else %}
+                            <li><i class="fas fa-check"></i> Basic Chatbot</li>
+                            <li><i class="fas fa-check"></i> 5-10 Page Website</li>
+                            <li><i class="fas fa-check"></i> Responsive Design</li>
+                            <li><i class="fas fa-check"></i> Basic SEO</li>
+                            <li><i class="fas fa-check"></i> 3 Months Support</li>
+                            {% endif %}
+                        </ul>
+                    </div>
+                </div>
+                
+                <div class="col-lg-4 col-md-6">
+                    <div class="pricing-card featured">
+                        <div class="popular-badge">{% if lang == 'th' %}ยอดนิยม{% else %}Popular{% endif %}</div>
+                        <div class="pricing-header">
+                            {% if lang == 'th' %}
+                            <h3>Professional</h3>
+                            <p>สำหรับธุรกิจระดับกลาง</p>
+                            <div class="price">฿150,000 - ฿500,000</div>
+                            {% else %}
+                            <h3>Professional</h3>
+                            <p>For medium businesses</p>
+                            <div class="price">฿150,000 - ฿500,000</div>
+                            {% endif %}
+                        </div>
+                        <ul class="pricing-features">
+                            {% if lang == 'th' %}
+                            <li><i class="fas fa-check"></i> แชทบอท AI ขั้นสูง</li>
+                            <li><i class="fas fa-check"></i> เว็บไซต์ E-commerce</li>
+                            <li><i class="fas fa-check"></i> ระบบ AI เบื้องต้น</li>
+                            <li><i class="fas fa-check"></i> API Integration</li>
+                            <li><i class="fas fa-check"></i> Support 6 เดือน</li>
+                            {% else %}
+                            <li><i class="fas fa-check"></i> Advanced AI Chatbot</li>
+                            <li><i class="fas fa-check"></i> E-commerce Website</li>
+                            <li><i class="fas fa-check"></i> Basic AI System</li>
+                            <li><i class="fas fa-check"></i> API Integration</li>
+                            <li><i class="fas fa-check"></i> 6 Months Support</li>
+                            {% endif %}
+                        </ul>
+                    </div>
+                </div>
+                
+                <div class="col-lg-4 col-md-6">
+                    <div class="pricing-card">
+                        <div class="pricing-header">
+                            {% if lang == 'th' %}
+                            <h3>Enterprise</h3>
+                            <p>สำหรับองค์กรขนาดใหญ่</p>
+                            <div class="price">฿500,000+</div>
+                            {% else %}
+                            <h3>Enterprise</h3>
+                            <p>For large organizations</p>
+                            <div class="price">฿500,000+</div>
+                            {% endif %}
+                        </div>
+                        <ul class="pricing-features">
+                            {% if lang == 'th' %}
+                            <li><i class="fas fa-check"></i> AI System แบบ Custom</li>
+                            <li><i class="fas fa-check"></i> เว็บแอปพลิเคชัน</li>
+                            <li><i class="fas fa-check"></i> ประสาน AI เข้าระบบ</li>
+                            <li><i class="fas fa-check"></i> Machine Learning</li>
+                            <li><i class="fas fa-check"></i> Support 1 ปี</li>
+                            {% else %}
+                            <li><i class="fas fa-check"></i> Custom AI System</li>
+                            <li><i class="fas fa-check"></i> Web Application</li>
+                            <li><i class="fas fa-check"></i> AI System Integration</li>
+                            <li><i class="fas fa-check"></i> Machine Learning</li>
+                            <li><i class="fas fa-check"></i> 1 Year Support</li>
+                            {% endif %}
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="text-center mt-5">
+                <a href="{{ url_for('contact') }}" class="btn btn-primary btn-lg">
+                    {% if lang == 'th' %}ปรึกษาราคาฟรี{% else %}Free Quote Consultation{% endif %}
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- FAQ Section -->
+    <section class="faq-section py-5 bg-light">
+        <div class="container">
+            {% if lang == 'th' %}
+            <h2 class="section-title text-center mb-5">คำถามที่พบบ่อย</h2>
+            {% else %}
+            <h2 class="section-title text-center mb-5">Frequently Asked Questions</h2>
+            {% endif %}
+            
+            <div class="row">
+                <div class="col-lg-8 mx-auto">
+                    <div class="accordion" id="faqAccordion">
+                        <div class="accordion-item">
+                            <h2 class="accordion-header" id="faq1">
+                                <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapse1">
+                                    {% if lang == 'th' %}ใช้เวลาพัฒนานานแค่ไหน?{% else %}How long does development take?{% endif %}
+                                </button>
+                            </h2>
+                            <div id="collapse1" class="accordion-collapse collapse show" data-bs-parent="#faqAccordion">
+                                <div class="accordion-body">
+                                    {% if lang == 'th' %}
+                                    ขึ้นอยู่กับความซับซ้อนของโปรเจค โดยทั่วไป แชทบอทพื้นฐานใช้เวลา 2-4 สัปดาห์ เว็บไซต์ใช้เวลา 4-8 สัปดาห์ และระบบ AI แบบ Custom ใช้เวลา 2-6 เดือน
+                                    {% else %}
+                                    Depends on project complexity. Generally, basic chatbots take 2-4 weeks, websites take 4-8 weeks, and custom AI systems take 2-6 months.
+                                    {% endif %}
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="accordion-item">
+                            <h2 class="accordion-header" id="faq2">
+                                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapse2">
+                                    {% if lang == 'th' %}มีการดูแลหลังการส่งมอบหรือไม่?{% else %}Is there after-delivery support?{% endif %}
+                                </button>
+                            </h2>
+                            <div id="collapse2" class="accordion-collapse collapse" data-bs-parent="#faqAccordion">
+                                <div class="accordion-body">
+                                    {% if lang == 'th' %}
+                                    มีครับ เรามีบริการ Support และ Maintenance ตั้งแต่ 3 เดือน ถึง 1 ปี ขึ้นอยู่กับแพ็คเกจที่เลือก รวมถึงการอบรมการใช้งานระบบด้วย
+                                    {% else %}
+                                    Yes, we provide support and maintenance services from 3 months to 1 year depending on the chosen package, including system usage training.
+                                    {% endif %}
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="accordion-item">
+                            <h2 class="accordion-header" id="faq3">
+                                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapse3">
+                                    {% if lang == 'th' %}สามารถปรับแต่งได้หรือไม่?{% else %}Can it be customized?{% endif %}
+                                </button>
+                            </h2>
+                            <div id="collapse3" class="accordion-collapse collapse" data-bs-parent="#faqAccordion">
+                                <div class="accordion-body">
+                                    {% if lang == 'th' %}
+                                    ได้ครับ เราทำงานแบบ Custom ทั้งหมด ไม่ใช่ Template สำเร็จรูป ระบบจะถูกออกแบบและพัฒนาตามความต้องการเฉพาะของแต่ละองค์กร
+                                    {% else %}
+                                    Yes, we work entirely custom-made, not pre-made templates. Systems are designed and developed according to each organization's specific requirements.
+                                    {% endif %}
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA Section -->
+    <section class="cta-section py-5">
+        <div class="container text-center">
+            {% if lang == 'th' %}
+            <h2 class="mb-4">พร้อมเริ่มต้นโปรเจคของคุณแล้วหรือยัง?</h2>
+            <p class="lead mb-4">ปรึกษาฟรีกับทีมผู้เชี่ยวชาญของเรา เราจะช่วยวิเคราะห์และเสนอโซลูชันที่เหมาะสมที่สุด</p>
+            {% else %}
+            <h2 class="mb-4">Ready to Start Your Project?</h2>
+            <p class="lead mb-4">Get free consultation with our expert team. We'll help analyze and propose the most suitable solution.</p>
+            {% endif %}
+            
+            <div class="cta-buttons">
+                <a href="{{ url_for('contact') }}" class="btn btn-primary btn-lg me-3">
+                    {% if lang == 'th' %}เริ่มต้นเลย{% else %}Get Started{% endif %}
+                </a>
+                <a href="tel:+66980352350" class="btn btn-outline-light btn-lg">
+                    <i class="fas fa-phone me-2"></i>
+                    {% if lang == 'th' %}โทรปรึกษา{% else %}Call for Consultation{% endif %}
+                </a>
+            </div>
+        </div>
+    </section>
+</main>
 {% endblock %}
