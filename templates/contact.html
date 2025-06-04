@@ -107,7 +107,7 @@
             <div class="contact-form">
                 {% if lang == 'th' %}
                 <h2>ส่งข้อความถึงเรา</h2>
-                <form action="/submit-contact" method="post">
+                <form action="/contact" method="post">
                     <div class="form-group">
                         <label for="name">ชื่อ-นามสกุล</label>
                         <input type="text" id="name" name="name" required>
@@ -137,7 +137,7 @@
                 </form>
                 {% else %}
                 <h2>Send Us a Message</h2>
-                <form action="/submit-contact" method="post">
+                <form action="/contact" method="post">
                     <div class="form-group">
                         <label for="name">Full Name</label>
                         <input type="text" id="name" name="name" required>
