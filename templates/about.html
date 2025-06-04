@@ -33,16 +33,16 @@
                     <div class="company-stats mt-4">
                         <div class="row">
                             <div class="col-4 text-center">
-                                <h3 class="text-primary">50+</h3>
-                                <p>โปรเจคสำเร็จ</p>
+                                <h3 class="text-primary">10+</h3>
+                                <p>{% if lang == 'th' %}โปรเจคที่กำลังดำเนินการ{% else %}Ongoing Projects{% endif %}</p>
                             </div>
                             <div class="col-4 text-center">
-                                <h3 class="text-primary">5+</h3>
-                                <p>ปีประสบการณ์</p>
+                                <h3 class="text-primary">2+</h3>
+                                <p>{% if lang == 'th' %}ปีประสบการณ์ทีมงาน{% else %}Years Team Experience{% endif %}</p>
                             </div>
                             <div class="col-4 text-center">
-                                <h3 class="text-primary">98%</h3>
-                                <p>ความพึงพอใจ</p>
+                                <h3 class="text-primary">100%</h3>
+                                <p>{% if lang == 'th' %}มุ่งมั่นคุณภาพ{% else %}Quality Commitment{% endif %}</p>
                             </div>
                         </div>
                     </div>
@@ -59,16 +59,16 @@
                     <div class="company-stats mt-4">
                         <div class="row">
                             <div class="col-4 text-center">
-                                <h3 class="text-primary">50+</h3>
-                                <p>Successful Projects</p>
+                                <h3 class="text-primary">10+</h3>
+                                <p>{% if lang == 'th' %}โปรเจคที่กำลังดำเนินการ{% else %}Ongoing Projects{% endif %}</p>
                             </div>
                             <div class="col-4 text-center">
-                                <h3 class="text-primary">5+</h3>
-                                <p>Years Experience</p>
+                                <h3 class="text-primary">2+</h3>
+                                <p>{% if lang == 'th' %}ปีประสบการณ์ทีมงาน{% else %}Years Team Experience{% endif %}</p>
                             </div>
                             <div class="col-4 text-center">
-                                <h3 class="text-primary">98%</h3>
-                                <p>Client Satisfaction</p>
+                                <h3 class="text-primary">100%</h3>
+                                <p>{% if lang == 'th' %}มุ่งมั่นคุณภาพ{% else %}Quality Commitment{% endif %}</p>
                             </div>
                         </div>
                     </div>
@@ -198,91 +198,6 @@
                             <li><i class="fas fa-check text-success"></i> Legacy System Modernization</li>
                         </ul>
                         {% endif %}
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Team Section -->
-    <section class="team py-5">
-        <div class="container">
-            {% if lang == 'th' %}
-            <h2 class="section-title text-center mb-5">ทีมผู้เชี่ยวชาญ</h2>
-            {% else %}
-            <h2 class="section-title text-center mb-5">Expert Team</h2>
-            {% endif %}
-            
-            <div class="row justify-content-center g-4">
-                <div class="col-lg-4 col-md-6">
-                    <div class="team-member text-center">
-                        <div class="member-image">
-                            <img src="https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?w=300&h=300&fit=crop&crop=face&auto=format" 
-                                 alt="Fikree Hajiysuof" 
-                                 class="img-fluid rounded-circle">
-                        </div>
-                        <h3>Fikree Hajiysuof</h3>
-                        <p class="member-title">{% if lang == 'th' %}CEO & AI Engineer{% else %}CEO & AI Engineer{% endif %}</p>
-                        <p class="member-bio">
-                            {% if lang == 'th' %}
-                            ผู้เชี่ยวชาญด้าน AI และ Data Science มากกว่า 5 ปี เชี่ยวชาญในการพัฒนา Machine Learning Models และ AI Solutions สำหรับองค์กรต่างๆ
-                            {% else %}
-                            AI and Data Science specialist with over 5 years of experience, expert in developing Machine Learning Models and AI Solutions for various organizations.
-                            {% endif %}
-                        </p>
-                        <div class="member-skills">
-                            <span class="skill-tag">AI Development</span>
-                            <span class="skill-tag">Machine Learning</span>
-                            <span class="skill-tag">Data Science</span>
-                        </div>
-                    </div>
-                </div>
-                
-                <div class="col-lg-4 col-md-6">
-                    <div class="team-member text-center">
-                        <div class="member-image">
-                            <img src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=300&h=300&fit=crop&crop=face&auto=format" 
-                                 alt="Michael Rodriguez" 
-                                 class="img-fluid rounded-circle">
-                        </div>
-                        <h3>Michael Rodriguez</h3>
-                        <p class="member-title">{% if lang == 'th' %}CTO & Full-Stack Developer{% else %}CTO & Full-Stack Developer{% endif %}</p>
-                        <p class="member-bio">
-                            {% if lang == 'th' %}
-                            นักพัฒนาซอฟต์แวร์มืออาชีพที่เชี่ยวชาญในการสร้างเว็บแอปพลิเคชันและระบบ Backend ที่มีประสิทธิภาพสูง
-                            {% else %}
-                            Professional software developer specializing in creating high-performance web applications and backend systems.
-                            {% endif %}
-                        </p>
-                        <div class="member-skills">
-                            <span class="skill-tag">Full-Stack Development</span>
-                            <span class="skill-tag">Cloud Architecture</span>
-                            <span class="skill-tag">DevOps</span>
-                        </div>
-                    </div>
-                </div>
-                
-                <div class="col-lg-4 col-md-6">
-                    <div class="team-member text-center">
-                        <div class="member-image">
-                            <img src="https://images.unsplash.com/photo-1494790108755-2616b612b633?w=300&h=300&fit=crop&crop=face&auto=format" 
-                                 alt="Emma Patel" 
-                                 class="img-fluid rounded-circle">
-                        </div>
-                        <h3>Emma Patel</h3>
-                        <p class="member-title">{% if lang == 'th' %}Chief AI Officer{% else %}Chief AI Officer{% endif %}</p>
-                        <p class="member-bio">
-                            {% if lang == 'th' %}
-                            ผู้เชี่ยวชาญด้าน NLP และ Conversational AI ที่มีประสบการณ์ในการพัฒนาระบบแชทบอทขั้นสูงสำหรับหลายอุตสาหกรรม
-                            {% else %}
-                            NLP and Conversational AI specialist with experience in developing advanced chatbot systems for multiple industries.
-                            {% endif %}
-                        </p>
-                        <div class="member-skills">
-                            <span class="skill-tag">NLP</span>
-                            <span class="skill-tag">Chatbot Development</span>
-                            <span class="skill-tag">AI Research</span>
-                        </div>
                     </div>
                 </div>
             </div>
